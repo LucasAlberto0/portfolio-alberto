@@ -1,0 +1,64 @@
+
+.container{
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;/*serve para dividir os espaços entre os elementos*/
+
+}
+
+header.rolagem{
+        background-color: rgb(44, 43, 43);
+        padding: 15px 4%;
+        color: white;
+        
+    }
+
+
+header {
+    width: 100%;
+    padding: 50px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+
+    
+    img{
+        width: 50px;
+        height: 50px;
+    }
+
+    ul{
+        list-style-type: none;/*Serve para tirar as bolinhas da lista*/
+
+        li{
+            display: inline-block;/*Serve para deixar na mesma linha*/
+            margin: 0 40px;
+            font-size: large;
+            font-style: bold;
+            a{
+                color: #fff;
+                text-decoration: none;  
+            }
+        }
+    }
+
+    
+
+}
+
+.btn-contato{
+    button{
+        width: 120px;
+        height: 40px;
+        border: 0;
+        background-color: #FE775A;
+        color: white;
+        cursor: pointer;
+        transition: .2s;
+    }
+}
