@@ -4,7 +4,7 @@
     <div class="flex">
         <a href=""><iconify-icon icon="game-icons:tiger-head" width="55" height="55"
         class="text-white"/></a>
-        <nav>
+        <nav class="desktop">
             <ul>
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#sobre">SOBRE</a></li>
@@ -12,6 +12,22 @@
                 <li><a href="#contato">CONTATO</a></li>
             </ul>
         </nav>
+        <nav class="mobile transition_on" data-aos="fade-left" data-aos-delay="150">
+            <div class="hamburguer-bt mobile" [ngClass]="{'ativo': menuAtivo}" (click)="toggleMenu()">
+                <div class="hamburguer_line hamburguer-top"></div>
+                <div class="hamburguer_line hamburguer-middle"></div>
+                <div class="hamburguer_line hamburguer-bottom"></div>
+            </div>
+        </nav>
+        <div id="opt_menu" class="mobile transition_on" [ngClass]="{'ativo': menuAtivo}">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#sobre">SOBRE</a></li>
+                <li><a href="#tecnologias">TECNOLOGIAS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </div>
+        <div class="fundo_menu mobile transition_on" [ngClass]="{'ativo': menuAtivo}" (click)="toggleMenu()"></div>
 
         </div>
     </div>

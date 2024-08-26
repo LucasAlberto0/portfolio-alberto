@@ -1,7 +1,6 @@
-$color1: #0000; // Cor 1
-$color2: #FFFF; // Cor 2
-$color3: #75ff33; // Cor 3
-$color4: #33ffbd; // Cor 4
+$color1: #0000; 
+$color2: #FFFF; 
+
 
 
 * {
@@ -16,7 +15,7 @@ $color4: #33ffbd; // Cor 4
     }
 
     .size-1x {
-        height: 100vh; /* 5 vezes a altura da viewport */
+        height: 100vh; 
         }
 
         .element {

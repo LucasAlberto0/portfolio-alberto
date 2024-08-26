@@ -1,0 +1,46 @@
+.box{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: #000508;
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+img{
+    position: relative;
+    z-index: 2;
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    object-fit: cover; /* Ajustado para cobrir a área sem distorcer a imagem */
+    clip-path: circle(50% at 50% 50%); /* Define um formato de círculo para a imagem */
+}
+
+.box::before{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 300%;
+    background: linear-gradient(180deg, white,white );
+
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.box::after{
+    content: "";
+    position: absolute;
+    background-color: #000508;
+    inset: 5px;
+    border-radius: inherit;
+}
