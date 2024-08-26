@@ -2,8 +2,7 @@
 <header id="header">
     <div class="container 2xl:max-w-7xl xl:max-w-6xl md:max-w-5xl sm:max-w-2xl xs:max-w-xl">
     <div class="flex">
-        <a href=""><iconify-icon icon="game-icons:tiger-head" width="55" height="55"
-        class="text-white"/></a>
+        <a href="" class="flex justify-center"><iconify-icon icon="game-icons:tiger-head" width="55" height="55" class="text-white icon-size"/></a>
         <nav class="desktop">
             <ul>
                 <li><a href="#home">HOME</a></li>
@@ -12,7 +11,7 @@
                 <li><a href="#contato">CONTATO</a></li>
             </ul>
         </nav>
-        <nav class="mobile transition_on" data-aos="fade-left" data-aos-delay="150">
+        <nav class="mobile transition_on">
             <div class="hamburguer-bt mobile" [ngClass]="{'ativo': menuAtivo}" (click)="toggleMenu()">
                 <div class="hamburguer_line hamburguer-top"></div>
                 <div class="hamburguer_line hamburguer-middle"></div>
@@ -21,10 +20,10 @@
         </nav>
         <div id="opt_menu" class="mobile transition_on" [ngClass]="{'ativo': menuAtivo}">
             <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#sobre">SOBRE</a></li>
-                <li><a href="#tecnologias">TECNOLOGIAS</a></li>
-                <li><a href="#contato">CONTATO</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#tecnologias">Tecnologias</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </div>
         <div class="fundo_menu mobile transition_on" [ngClass]="{'ativo': menuAtivo}" (click)="toggleMenu()"></div>

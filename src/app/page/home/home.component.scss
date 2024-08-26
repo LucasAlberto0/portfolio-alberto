@@ -47,3 +47,32 @@ $color2: #FFFF;
             $color2,
             );
         }
+        
+
+@media(max-width: 450px) {
+    .content-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        max-width: 340px;
+        div{
+            div{
+                gap: 1px;
+            }
+        }
+        
+        h1{
+            font-size: xx-large;
+        }
+        h2{
+            font-size: x-large;
+        }
+        .icon-size{
+            transform: scale(0.7);
+            width: 40px;
+            height: 20px;
+        } 
+    }
+}
