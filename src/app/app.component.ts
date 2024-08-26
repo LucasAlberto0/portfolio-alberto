@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -18,7 +18,7 @@ export class AppComponent {
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
-      AOS.init();
+      AOS.init({});
     }
   }
 }
