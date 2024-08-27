@@ -50,6 +50,13 @@ $color2: #FFFF;
         
 
 @media(max-width: 450px) {
+    .size-1x{
+        height: none;
+    }
+    
+    .size-custom1{
+        height: 120vh;
+    }
     .content-1{
         display: flex;
         flex-direction: column;
@@ -92,4 +99,16 @@ $color2: #FFFF;
         width: 30px; 
         height: 15px; 
     }
+}
+
+@media(max-width: 350px) {
+
+    .size-custom1{
+        height: 170vh;
+    }
+    .size-custom2{
+        height: 135vh;
+    }
+
+
 }

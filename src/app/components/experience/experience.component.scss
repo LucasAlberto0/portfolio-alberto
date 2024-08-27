@@ -26,6 +26,11 @@ h2{
     max-width: 34.15em;
 }
 
+.title2{
+    font-size: 2.8em;
+    margin-bottom: 40px;
+} 
+
 .checkpoint{
     max-width: 34em;
     padding-top: 2em;
@@ -33,12 +38,12 @@ h2{
     position: relative;
 
     div{
-        border: 2px solid #888;
+        border: 3px solid #888;
         border-radius: 1em;
         padding: 1.5em;
     }
     p{
-        line-height: 27px;
+        line-height: 22px;
         color: #ccc;
     }
     
@@ -120,6 +125,36 @@ h2{
             }
 
         }
-        
-    
+}
+
+@media(max-width: 450px){
+    .timeline{
+        max-width: 23.15em;
+    }
+    .checkpoint{
+        max-width: 30em;
+        max-height: 18em;
+        padding-top: 1.4em;
+        padding-bottom: 1.5em;
+        div{
+            padding: 0.7em;
+        }
+    }
+    p{
+        color: rgb(174, 174, 211);
+        font-size: 0.9em;
+        letter-spacing: 1px;
+    }
+    .checkpoint{
+        &::before {
+            width: 3px;
+            height: 3em;
+            top: -1.6em;
+        }
+
+    }
+    .title2{
+        font-size: xx-large;
+        margin-bottom: 40px;
+    } 
 }
