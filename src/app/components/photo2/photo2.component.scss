@@ -56,3 +56,14 @@ img{
 }
 
 }
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .box{
+        width: 180px;
+        height: 180px;
+    }
+    img{
+        width: 160px;
+        height: 160px;
+    }
+}

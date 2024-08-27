@@ -29,11 +29,12 @@ header {
     left: 0;
     transition: 0.5s;
     z-index: 4;
+    background-color: black;
 
     
     img{
-        width: 50px;
-        height: 50px;
+        width: 160px;
+        height: 40px;
     }
 
     ul{
@@ -70,6 +71,9 @@ header {
 .mobile {
     display: none;
 }
+.white-filter {
+    filter: brightness(0) invert(1);
+    }
 
 @media(max-width: 991px) {
     .mobile {
@@ -94,7 +98,11 @@ header {
         top: 0;
         padding:  15px;
         z-index: 99;
-        background-color: black;
+        img{
+            margin: 13px;
+            width: 120px;
+            height: 30px;
+        }
     }
 
     header .hamburguer-bt {
@@ -193,3 +201,28 @@ header {
             
 
     }
+    @media (max-height: 500px) and (orientation: landscape) {
+    header{ padding: 10px 4%;
+    }
+    header{
+        background-color: transparent;
+    }    
+    
+    header.rolagem{
+            background-color: rgb(44, 43, 43);
+            padding: 2px 2%;
+            color: white;
+            
+        }
+        .icon-size{
+            transform: scale(0.7);
+        }
+        header{ 
+            #opt_menu {
+                width: 200px;
+                top: 69px;
+            }
+            .fundo_menu {
+                top: 59px;
+            }
+    }}

@@ -76,3 +76,20 @@ $color2: #FFFF;
         } 
     }
 }
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .content-1{
+        max-width: 650px;
+    }
+    h1 {
+        font-size: x-large; 
+    }
+    h2 {
+        font-size: medium; 
+    }
+    .icon-size {
+        transform: scale(0.6); 
+        width: 30px; 
+        height: 15px; 
+    }
+}
