@@ -4,12 +4,13 @@ import { PhotoComponent } from '../../components/photo/photo.component';
 import { CommonModule } from '@angular/common';
 import { AboutComponent } from '../../components/about/about.component';
 import { ExperienceComponent } from '../../components/experience/experience.component';
+import { SkillsComponent } from '../../components/skills/skills.component';
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, PhotoComponent, CommonModule, AboutComponent, ExperienceComponent],
+  imports: [HeaderComponent, PhotoComponent, CommonModule, AboutComponent, ExperienceComponent, SkillsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
