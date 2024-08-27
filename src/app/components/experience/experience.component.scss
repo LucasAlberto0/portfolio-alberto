@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin: 0.3em;
+    font-size: 2em;
+}
+
+h2{
+    margin-bottom: 0.5em;
+}
+
+.title{
+    text-align: center;
+
+    p{
+        color: rgb(174, 174, 211);
+        font-size: 1.3em;
+        letter-spacing: 2px;
+    }
+}
+
+.timeline{
+    max-width: 34.15em;
+}
+
+.checkpoint{
+    max-width: 34em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+
+    div{
+        border: 2px solid #888;
+        border-radius: 1em;
+        padding: 1.5em;
+    }
+    p{
+        line-height: 27px;
+        color: #ccc;
+    }
+    
+}
+.left {
+        border-left: 3px solid #888;
+        padding-left: 3em;
+        transform: translateX(17em);
+    }
+
+    .right{
+        border-right: 3px solid #888;
+        padding-right: 3em;
+        transform: translateX(-16.8em);
+    }
+
+    .left::before,
+    .right::before {
+        content: '';
+        background: #888;
+        width: 3em;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .left::before{
+        left: 0;
+    }
+
+    .right::before{
+        right: 0;
+    }
+
+    .left div::before,
+    .right div::before {
+        content: '';
+        background: #fff;
+        box-shadow: 0 0 0.5em #0d71fc;
+        width: 0.8em;
+        height: 0.8em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+    }
+    .left div::before{
+        left: -0.5em;
+    }
+    .right div::before{
+        right: -0.5em;
+    }
+
+    @media screen and (max-width: 1150px) {
+        .timeline {
+            width: 80vh;
+
+        }
+        .checkpoint{
+            width: 100%;
+            transform: none;
+            padding-left: 0;
+            padding-right: 0;
+            border: none;
+
+            &::before {
+                width: 3px;
+                height: 4em;
+                top: -2em;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            div::before{
+                top: -0.5em;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+        }
+        
+    
+}
