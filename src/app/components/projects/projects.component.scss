@@ -1,0 +1,9 @@
+.hover-custom{
+        transition: .35s;
+        cursor: pointer;
+    
+}
+aside:hover > :not(:hover){
+        opacity: .5;
+        transform: scale(0.9);
+    } 

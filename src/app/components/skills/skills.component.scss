@@ -1,29 +1,19 @@
-/* Estilo para o contêiner do carrossel */
-.slide-track {
-    display: flex;
-    overflow: hidden; /* Oculta o conteúdo que ultrapassa o contêiner */
-    position: relative;
-    width: 100%; /* Ajusta a largura do contêiner ao tamanho do pai */
-  }
-  
-  /* Estilo para o wrapper dos slides */
+
   .slide-wrapper {
     display: flex;
-    flex-wrap: nowrap; /* Garante que os slides não quebram linha */
-    width: fit-content; /* Ajusta a largura do wrapper ao tamanho do conteúdo */
-    animation: scroll 50s linear infinite; /* Ajuste a duração da animação */
+    flex-wrap: nowrap; 
+    width: fit-content; 
+    animation: scroll 120s linear infinite; 
     will-change: transform;
   }
   
-  /* Estilo para cada slide */
   .slide {
-    flex: 0 0 auto; /* Impede que o slide encolha ou expanda */
-    margin-right: 20px; /* Espaçamento entre os slides */
-    white-space: nowrap; /* Impede quebra de linha dentro do slide */
-    text-align: center; /* Centraliza o texto */
+    flex: 0 0 auto; 
+    margin-right: 20px; 
+    white-space: nowrap; 
+    text-align: center; 
   }
   
-  /* Animação para rolar os slides */
   @keyframes scroll {
     0% {
       transform: translateX(0);

@@ -1,37 +1,42 @@
-import { Component, AfterViewInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  styleUrls: ['./skills.component.scss'],
 })
-export class SkillsComponent implements AfterViewInit{
+export class SkillsComponent implements AfterViewInit {
   
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngAfterViewInit() {
-    const slideWrapper = document.querySelector('.slide-wrapper') as HTMLElement;
+    if (isPlatformBrowser(this.platformId)) {
+      const slideWrapper = document.querySelector('.slide-wrapper') as HTMLElement;
 
-    if (slideWrapper) {
-      const slides = Array.from(document.querySelectorAll('.slide')) as HTMLElement[];
-      const totalSlides = slides.length;
-      const slideWidth = slides[0].offsetWidth;
-      const spacing = parseInt(window.getComputedStyle(slides[0]).marginRight, 10);
-      const totalWidth = (slideWidth + spacing) * totalSlides;
+      if (slideWrapper) {
+        const slides = Array.from(document.querySelectorAll('.slide')) as HTMLElement[];
+        const totalSlides = slides.length;
+        const slideWidth = slides[0].offsetWidth;
+        const spacing = parseInt(window.getComputedStyle(slides[0]).marginRight, 10);
+        const totalWidth = (slideWidth + spacing) * totalSlides;
 
-      // Duplicar slides
-      slides.forEach(slide => {
-        const clone = slide.cloneNode(true) as HTMLElement;
-        slideWrapper.appendChild(clone);
-      });
-      slides.forEach(slide => {
-        const clone = slide.cloneNode(true) as HTMLElement;
-        slideWrapper.appendChild(clone);
-      });
+        
+        slides.forEach(slide => {
+          const clone = slide.cloneNode(true) as HTMLElement;
+          slideWrapper.appendChild(clone);
+        });
+        slides.forEach(slide => {
+          const clone = slide.cloneNode(true) as HTMLElement;
+          slideWrapper.appendChild(clone);
+        });
+        
 
-      // Ajustar a largura do slide-wrapper para permitir rotação infinita
-      slideWrapper.style.width = `${totalWidth * 2}px`; // Largura total dos slides duplicados
+        
+        slideWrapper.style.width = `${totalWidth * 2}px`; 
+      }
     }
   }
 }
