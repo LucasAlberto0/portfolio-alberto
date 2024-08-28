@@ -1,9 +1,50 @@
 .hover-custom{
         transition: .35s;
-        cursor: pointer;
-    
+        cursor: pointer; 
 }
 aside:hover > :not(:hover){
         opacity: .5;
         transform: scale(0.9);
-    } 
+}
+
+span{
+        font-weight: bold;
+}
+
+@media(max-width: 480px){
+article{
+        max-width: 22rem;
+        margin-top: 60px;
+        aside{
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        div{
+                width: 100%;
+                
+        }
+        .flex-custom{
+                gap: 7px;
+        }
+        .h-img{
+                height: 16rem;  
+        }       
+        }
+        .flex-custom{
+                gap: 0px;
+        }
+        .text-5xl{
+                font-size: 1.6em;
+                margin-bottom: 30px;
+        }
+        .text-sm{
+                font-size: 0.9em;
+        } 
+        .icon-size{
+                transform: scale(0.6);
+                padding: 0;
+                width: 2em;
+        } 
+}
+}
+

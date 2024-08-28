@@ -22,4 +22,44 @@
       transform: translateX(-100%);
     }
   }
+
+  @media(max-width: 480px){
+    article{
+      max-width: 22rem;
+        .icon-size{
+          transform: scale(0.6);
+          padding: 0;
+          width: 2em;
+          transform-origin: left;
+      } 
+      .flex-custom{
+        gap: 0px;
+      }
+      .text-5xl{
+        font-size: 1.6em;
+        margin-bottom: 30px;
+      } 
+      .capriola{
+        font-size: 0.3em;
+      }
+    .slide-wrapper{ 
+      font-size: 0.5em;
+      gap: 0;
+      animation: scroll 50s linear infinite;
+      
+        .slide{
+          padding: 10px;
+        }
+        img{
+          width: 3rem;
+          height: 3rem;
+        }
+        .text-xl{
+          font-size: 1.7em;
+        }
+      }
+    }
+  }
+  
+
   

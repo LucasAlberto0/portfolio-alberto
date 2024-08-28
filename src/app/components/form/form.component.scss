@@ -30,3 +30,47 @@ button:focus-visible::after{
     transform-origin: left;
     scale: 1 1;
 }
+
+@media(max-width: 480px){
+    article{
+        min-width: 21.8em;
+        max-width: 22rem;
+    }
+    .dad-div{
+        flex-direction: column;
+        justify-content: center;
+        gap: 4em;
+    }
+    .text-5xl{
+        font-size: 1.6em;
+        margin-bottom: 30px;  
+    }
+    .text-3xl{
+        font-size: 1.2em;
+        margin-bottom: 30px;  
+    }
+    .form-width{
+        width: 100%;
+    } 
+    .flex-custom{
+        gap: 0;
+    }
+    .icon-size{
+        transform: scale(0.6);
+        padding: 0;
+        width: 2em;
+        transform-origin: left;
+    } 
+    .text-gray-custom{
+        font-size: 0.8em;
+    }
+    .margin-custom1{
+        margin-bottom: 5px;
+    }
+
+    h2{
+        margin-bottom: 0.5empx;
+    }
+
+    
+}

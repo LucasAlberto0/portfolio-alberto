@@ -42,7 +42,7 @@ header {
 
         li{
             display: inline-block;
-            margin: 0 40px;
+            margin: 0 10px;
             font-size: large;
             font-style: bold;
             a{
@@ -183,15 +183,27 @@ nav li:hover::after{
     header #opt_menu {
         position: fixed;
         height: calc(100% - 86px);
-        width: 320px;
+        width: 200px;
         background: grayscale($color: #222020);
         opacity: 1;
         z-index: 99;
         right: -150%;
         top: 78px;
         padding: 10px;
-        display: block;
+        display: flex;
         overflow: auto;
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin: 0;
+            padding-left: 30px;
+            height: 50px;
+            align-items: center;
+            li{
+                margin: 0;
+            }
+        }
     }
 
     header #opt_menu ul {
@@ -235,7 +247,6 @@ nav li:hover::after{
     }
     header{ 
         #opt_menu {
-            width: 200px;
             top: 59px;
         }
         .fundo_menu {
@@ -264,7 +275,6 @@ nav li:hover::after{
         }
         header{ 
             #opt_menu {
-                width: 200px;
                 top: 69px;
             }
             .fundo_menu {

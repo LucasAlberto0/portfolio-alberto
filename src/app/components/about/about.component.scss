@@ -1,11 +1,61 @@
-.white-filter {
-        filter: brightness(0) invert(1);
+        .description {
+            text-align: left; 
         }
 
-@media(max-width: 450px) {
+        .white-filter {
+            filter: brightness(0) invert(1);
+        }
+
+        span{
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            position: relative;
+            isolation: isolate;
+            padding: 4px;
+
+            &:hover{
+                color: black;
+                img{
+                    filter: brightness(1) invert(0);
+                }
+            }
+        }
+
+        
+        span::after{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            background: white;
+            inset: 0;
+            color: black;
+            scale: 0 1;
+            transition: scale 450ms;
+        }
+        
+        span:hover::after,
+        span:focus-visible::after{
+            color: black;
+            transform-origin: left;
+            scale: 1 1;
+        }
+
+
+@media(max-width: 480px) {
         .title{
-            font-size: xx-large;
+            font-size: 1.6em;
             margin-bottom: 30px;
+        }  
+        .flex-custom{
+            gap: 0;
+        }
+        .icon-size{
+            transform: scale(0.6);
+            padding: 0;
+            width: 2em;
+            transform-origin: left;
         } 
         .content-1{
         display: flex;
@@ -13,19 +63,24 @@
         justify-content: center;
         align-items: center;
         gap: 40px;
-        max-width: 340px;
+        max-width: 22rem;
         div{
             font-size: medium;
+            text-align: justify;
+        }
+        span{
+            padding: 0px 5px;
         }
         
-        .icon-size{
-            transform: scale(0.7);
-            width: 40px;
-            height: 20px;
-        } 
+
     }
 }
-        
+    
+
+
+
+
+
 @media (max-height: 500px) and (orientation: landscape) {
     .title{
         font-size: xx-large;

@@ -1,5 +1,5 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -7,6 +7,8 @@ import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
   imports: [CommonModule],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss'],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+
 })
 export class SkillsComponent implements AfterViewInit {
   
