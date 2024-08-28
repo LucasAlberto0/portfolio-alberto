@@ -1,0 +1,32 @@
+form{
+    width: 32rem;
+}
+
+button{
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border: 3px solid white;
+    color: white;
+
+    position: relative;
+    isolation: isolate;
+}
+
+button::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: white;
+    inset: 0;
+    color: black;
+    scale: 0 1;
+    transition: scale 450ms;
+}
+
+button:hover::after,
+button:focus-visible::after{
+    color: black;
+    transform-origin: left;
+    scale: 1 1;
+}
