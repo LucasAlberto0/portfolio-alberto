@@ -23,6 +23,40 @@
     }
   }
 
+  @media(max-width: 770px){
+    article{
+      max-width: 44rem;
+        .icon-size{
+          transform: scale(0.8);
+          padding: 0;
+          width: 2em;
+          transform-origin: left;
+      } 
+      .flex-custom{
+        gap: 0px;
+      }
+      .text-5xl{
+        font-size: 2.2em;
+        margin-bottom: 40px;
+      } 
+    .slide-wrapper{ 
+      gap: 0;
+      animation: scroll 50s linear infinite;
+      
+        .slide{
+          padding: 10px;
+        }
+        img{
+          width: 3.7rem;
+          height: 3.7rem;
+        }
+        .text-xl{
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
+
   @media(max-width: 480px){
     article{
       max-width: 22rem;

@@ -234,6 +234,32 @@ nav li:hover::after{
     }
 }
 
+@media(max-width: 770px){
+    
+
+    header.rolagem{
+        background-color: rgb(44, 43, 43);
+        padding: 2px 2%;
+        color: white;
+        
+    }
+    header{ 
+        width: 100%;
+        img{
+            margin: 13px;
+            width: 130px;
+            height: 35px;
+        }
+        #opt_menu {
+            top: 59px;
+        }
+        .fundo_menu {
+            top: 59px;
+        }
+
+    }
+}
+
 @media(max-width: 450px){
     
     header.rolagem{
@@ -254,9 +280,8 @@ nav li:hover::after{
         }
 
     }
-            
+}
 
-    }
     @media (max-height: 500px) and (orientation: landscape) {
     header{ padding: 10px 4%;
     }

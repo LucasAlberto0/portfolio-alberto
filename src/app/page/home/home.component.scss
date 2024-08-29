@@ -77,6 +77,52 @@ $color2: #FFFF;
     }
 }
 
+@media(max-width: 770px) {
+    .size-1x{
+        height: none;
+    }
+
+    .projects-size-custom,
+    .experience-size-custom,
+    .about-size-custom,
+    .form-size-custom {   
+        padding: 60px 0px 60px 0px;
+        height: auto;
+        
+    }
+    .content-1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 60px;
+        max-width: 46rem;
+        div{
+            div{
+                gap: 20px;
+            }
+        }
+        
+        h1{
+            font-size: 2.7em;
+        }
+        h2{
+            font-size: 2.2em;
+        }
+        
+        .icon-size{
+            margin-top: 20px;
+            transform: scale(1);
+            width: 40px;
+            height: 20px;
+            
+        } 
+    }
+    .footer{
+        font-size: 0.8em;
+    }
+}
+
 @media (max-height: 500px) and (orientation: landscape) {
     .content-1{
         max-width: 650px;

@@ -45,7 +45,18 @@ img{
     border-radius: inherit;
 }
 
-@media(max-width: 500px) {
+@media(max-width: 770px) {
+    .box{
+        width: 260px;
+        height: 260px;
+}
+img{
+    width: 230px;
+    height: 230px;
+}
+}
+
+@media(max-width: 480px) {
     .box{
         width: 200px;
         height: 200px;
@@ -55,6 +66,7 @@ img{
     height: 170px;
 }
 }
+
 
 @media (max-height: 500px) and (orientation: landscape) {
     .box{
