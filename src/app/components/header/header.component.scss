@@ -297,6 +297,23 @@ nav li:hover::after{
     }
 }
 
+@media (max-height: 800px){
+    header {
+        width: 100%;
+        position: fixed;
+        padding:  15px;
+        z-index: 99;
+        img{
+            margin: 13px;
+            width: 100px;
+            height: 25px;
+        }
+    }
+    .rolagem{
+        padding: 0;
+    }
+}
+
     @media (max-height: 500px) and (orientation: landscape) {
     header{ padding: 10px 4%;
     }

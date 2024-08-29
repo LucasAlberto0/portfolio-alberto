@@ -260,6 +260,16 @@ $color2: #FFFF;
     }
 }
 
+@media (max-height: 800px){
+    
+    .projects-size-custom,
+    .experience-size-custom,
+    .about-size-custom,
+    .form-size-custom {   
+        padding: 80px 0px 80px 0px;
+        height: auto;
+    }
+}
 
 
 @media (max-height: 500px) and (orientation: landscape) {
