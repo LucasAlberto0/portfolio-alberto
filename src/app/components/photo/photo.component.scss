@@ -67,6 +67,18 @@ img{
 }
 }
 
+@media(max-width: 710px) {
+    .box{
+        width: 230px;
+        height: 230px;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+
+}
+
 @media(max-width: 480px) {
     .box{
         width: 200px;
@@ -78,6 +90,16 @@ img{
 }
 }
 
+@media(max-width: 370px) {
+    .box{
+        width: 180px;
+        height: 180px;
+}
+img{
+    width: 160px;
+    height: 160px;
+}
+}
 
 @media (max-height: 500px) and (orientation: landscape) {
     .box{

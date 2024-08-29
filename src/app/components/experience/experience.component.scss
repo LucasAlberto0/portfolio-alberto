@@ -185,9 +185,117 @@ h2{
     
 }
 
+@media(max-width: 710px){
+    .timeline{
+        max-width: 29.6rem;
+    }
+    .checkpoint{
+        max-width: 30em;
+        max-height: 18em;
+        padding-top: 1.4em;
+        padding-bottom: 1.5em;
+        div{
+            padding: 0.7em;
+        }
+    }
+    p{
+        color: rgb(174, 174, 211);
+        font-size: 0.8em;
+        letter-spacing: 1px;
+    }
+    .checkpoint{
+        &::before {
+            width: 3px;
+            height: 3em;
+            top: -1.6em;
+        }
 
+    }
+    .title2{
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }  
+    .icon-size1{
+        transform: scale(0.7);
+        padding: 0;
+        width: 2em;
+    } 
+    .icon-size2{
+        transform: scale(0.7);
+        transform-origin: left;
+        padding: 0;
+        width: 2em;
+    } 
+    .text-md{
+        font-size: 0.9em;
+    }
+}
 
 @media(max-width: 480px){
+    .timeline{
+        max-width: 19rem;
+    }
+    .checkpoint{
+        max-width: 30em;
+        max-height: 18em;
+        padding-top: 1.4em;
+        padding-bottom: 1.5em;
+        div{
+            padding: 0.7em;
+        }
+    }
+    p{
+        color: rgb(174, 174, 211);
+        font-size: 0.7em;
+        letter-spacing: 1px;
+    }
+    .checkpoint{
+        &::before {
+            width: 3px;
+            height: 3em;
+            top: -1.6em;
+        }
+
+    }
+    .title2{
+        font-size: 1.6em;
+        margin-bottom: 30px;
+    }  
+    .icon-size1{
+        transform: scale(0.6);
+        padding: 0;
+        width: 2em;
+    } 
+    .icon-size2{
+        transform: scale(0.6);
+        transform-origin: left;
+        padding: 0;
+        width: 2em;
+    } 
+    .text-md{
+        font-size: 0.7em;
+    }
+}
+
+@media(max-width: 430px){
+    .timeline{
+        max-width: 23rem;
+    }
+    p{
+        font-size: 0.6em;
+    }
+}
+
+@media(max-width: 390px){
+    .timeline{
+        max-width: 22rem;
+    }
+    p{
+        font-size: 0.6em;
+    }
+}
+
+@media(max-width: 370px){
     .timeline{
         max-width: 22rem;
     }
@@ -231,6 +339,4 @@ h2{
     .text-md{
         font-size: 0.7em;
     }
-
-    
 }
