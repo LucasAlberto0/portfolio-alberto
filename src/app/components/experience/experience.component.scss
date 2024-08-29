@@ -100,10 +100,10 @@ h2{
 
     @media screen and (max-width: 1150px) {
         .timeline {
-            width: 80vh;
-
+            max-width: 50rem;
         }
         .checkpoint{
+            max-width: 65rem;
             width: 100%;
             transform: none;
             padding-left: 0;
@@ -127,7 +127,17 @@ h2{
         }
 }
 
-@media(max-width: 770px){
+@media(max-width:1070px){
+    .timeline{
+        max-width: 54.5rem;
+    }
+    .title2{
+        font-size: 2.4em;
+        margin-bottom: 50px;
+    }  
+}
+
+@media(max-width: 900px){
     .timeline{
         max-width: 44rem;
     }

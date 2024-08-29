@@ -11,9 +11,55 @@ span{
         font-weight: bold;
 }
 
+@media(max-width: 1070px){
+        article{
+                max-width: 55rem;
+                margin-top: 60px;
+                aside{
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+                div{
+                        flex: 0 1 calc(50% - 15px); 
+                        box-sizing: border-box;
+                        
+                }
+                p{
+                        font-size: 1.5em;
+                }
+                .flex-custom{
+                        gap: 7px;
+                }
+                .h-img{
+                        height: 16rem;  
+                }       
+                }
+                .flex-custom{
+                        gap: 0px;
+                }
+                .text-5xl{
+                        font-size: 2.4em;
+                        margin-bottom: 40px;
+                }
+                .text-sm{
+                        font-size: 1.1em;
+                } 
+                .icon-size1{
+                        transform: scale(0.8);
+                        padding: 0;
+                        width: 2em;
+                } 
+                .icon-size{
+                        transform: scale(1.3);
+                        padding: 0;
+                        width: 2em;
+                } 
+        }
+}
 
 
-@media(max-width: 770px){
+@media(max-width: 900px){
         article{
                 max-width: 44rem;
                 margin-top: 60px;
@@ -92,6 +138,11 @@ article{
                 font-size: 0.9em;
         } 
         .icon-size{
+                transform: scale(0.9);
+                padding: 0;
+                width: 2em;
+        } 
+        .icon-size1{
                 transform: scale(0.6);
                 padding: 0;
                 width: 2em;

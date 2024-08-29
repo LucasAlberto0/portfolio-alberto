@@ -23,7 +23,41 @@
     }
   }
 
-  @media(max-width: 770px){
+  @media(max-width: 1070px){
+    article{
+      max-width: 54.5rem;
+        .icon-size{
+          transform: scale(0.8);
+          padding: 0;
+          width: 2em;
+          transform-origin: left;
+      } 
+      .flex-custom{
+        gap: 0px;
+      }
+      .text-5xl{
+        font-size: 2.4em;
+        margin-bottom: 40px;
+      } 
+    .slide-wrapper{ 
+      gap: 0;
+      animation: scroll 80s linear infinite;
+      
+        .slide{
+          padding: 10px;
+        }
+        img{
+          width: 4rem;
+          height: 4rem;
+        }
+        .text-xl{
+          font-size: 1.4em;
+        }
+      }
+    }
+  }
+
+  @media(max-width: 900px){
     article{
       max-width: 44rem;
         .icon-size{

@@ -23,61 +23,68 @@ $color2: #FFFF;
     .size-1x5x{
         height: 150vh;
     }
+  
+@media(max-width: 1540px){
+    h1{
+        font-size: 3em;
+    }
+}
+@media(max-width: 1281px){
+    h1{
+        font-size: 2.7em;
+    }
+    h2{
+        font-size: 2.2em;
+    }
+}
 
-@media(max-width: 480px) {
+@media(max-width: 1070px) {
     .size-1x{
         height: none;
     }
-    .about-size-custom{
-        padding: 50px 0px 50px 0px;
+
+    .projects-size-custom,
+    .experience-size-custom,
+    .about-size-custom,
+    .form-size-custom {   
+        padding: 60px 0px 60px 0px;
         height: auto;
         
     }
-    .experience-size-custom{
-        padding: 50px 0px 50px 0px;
-        height: auto;
-        
-    }
-    .projects-size-custom{   
-        padding: 50px 0px 50px 0px;
-        height: auto;
-        
-    }
-    .form-size-custom{
-        padding: 50px 0px 50px 0px;
-        height: auto;
-    }  
     .content-1{
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        
         align-items: center;
-        gap: 60px;
-        max-width: 22rem;
+        flex-direction: row;
+        max-width: 52.5rem;
         div{
             div{
-                gap: 1px;
+                gap: 20px;
             }
         }
         
         h1{
-            font-size: xx-large;
+            font-size: 2.4em;
         }
         h2{
-            font-size: x-large;
+            font-size: 2em;
         }
+        
         .icon-size{
-            transform: scale(0.7);
-            width: 40px;
+            margin-top: 20px;
+            transform: scale(0.8);
+            transform-origin: left;
+            width: 30px;
             height: 20px;
+            
         } 
     }
     .footer{
-        font-size: 0.6em;
+        font-size: 1em;
     }
 }
 
-@media(max-width: 770px) {
+@media(max-width: 900px) {
     .size-1x{
         height: none;
     }
@@ -122,6 +129,50 @@ $color2: #FFFF;
         font-size: 0.8em;
     }
 }
+
+@media(max-width: 480px) {
+    .size-1x{
+        height: none;
+    }
+    .projects-size-custom,
+    .experience-size-custom,
+    .about-size-custom,
+    .form-size-custom {   
+        padding: 50px 0px 50px 0px;
+        height: auto;
+        
+    }
+    .content-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        max-width: 22rem;
+        div{
+            div{
+                gap: 1px;
+            }
+        }
+        
+        h1{
+            font-size: xx-large;
+        }
+        h2{
+            font-size: x-large;
+        }
+        .icon-size{
+            transform: scale(0.7);
+            width: 40px;
+            height: 20px;
+        } 
+    }
+    .footer{
+        font-size: 0.6em;
+    }
+}
+
+
 
 @media (max-height: 500px) and (orientation: landscape) {
     .content-1{
