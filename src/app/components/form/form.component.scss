@@ -208,6 +208,7 @@ button:focus-visible::after{
     }
     .form-width{
         width: 100%;
+        font-size: 0.9em;
     } 
     .flex-custom{
         gap: 0;
@@ -236,7 +237,7 @@ button:focus-visible::after{
     }
 }
 
-@media(max-width: 370px){
+@media(max-width: 359px){
     article{
         min-width: 19em;
         max-width: 19rem;
@@ -256,7 +257,7 @@ button:focus-visible::after{
     }
     .form-width{
         width: 100%;
-        font-size: 0.9em;
+        font-size: 0.8em;
     } 
     .flex-custom{
         gap: 0;
