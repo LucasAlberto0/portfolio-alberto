@@ -115,8 +115,25 @@ nav li:hover::after{
     filter: brightness(0) invert(1);
     }
 
-@media(max-width: 991px) {
+@media (max-width: 1070px){
+    .container{
+        max-width: 54.5rem;
+        
+    }
+    header{
+        img{
+        margin: 13px;
+        width: 110px;
+        height: 30px;
+    }}
+}
+
+@media(max-width: 900px) {
     
+    .container{
+        max-width: 44.5rem;
+    }
+
     li:hover::after{
         width: 0;
     }
@@ -181,7 +198,7 @@ nav li:hover::after{
 
     header #opt_menu {
         position: fixed;
-        height: calc(100% - 86px);
+        height: calc(100%);
         width: 200px;
         background: grayscale($color: #222020);
         opacity: 1;
@@ -244,15 +261,18 @@ nav li:hover::after{
             height: 30px;
         }
         #opt_menu {
-            top: 59px;
+            top: 58px;
         }
         .fundo_menu {
-            top: 59px;
+            top: 58px;
         }
     }
 }
 
 @media(max-width: 710px){
+    .container{
+        max-width: 36.5rem;
+    }
     
     header.rolagem{
         background-color: rgb(44, 43, 43);
@@ -266,17 +286,16 @@ nav li:hover::after{
         width: 110px;
         height: 25px;
     }
-        #opt_menu {
-            top: 59px;
-        }
-        .fundo_menu {
-            top: 59px;
-        }
+    #opt_menu {
+        top: 54px;
+    }
+    .fundo_menu {
+        top: 54px;
+    }
     }
 }
 
 @media(max-width: 480px){
-    
     header.rolagem{
         background-color: rgb(44, 43, 43);
         padding: 2px 2%;
@@ -288,12 +307,12 @@ nav li:hover::after{
         width: 100px;
         height: 20px;
     }
-        #opt_menu {
-            top: 59px;
-        }
-        .fundo_menu {
-            top: 59px;
-        }
+    #opt_menu {
+        top: 50px;
+    }
+    .fundo_menu {
+        top: 50px;
+    }
     }
 }
 
@@ -331,10 +350,4 @@ nav li:hover::after{
             transform: scale(0.7);
         }
         header{ 
-            #opt_menu {
-                top: 69px;
-            }
-            .fundo_menu {
-                top: 59px;
-            }
     }}

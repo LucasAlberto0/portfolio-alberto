@@ -11,14 +11,15 @@ import 'aos/dist/aos.css';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent  implements OnInit {
   title = 'portfolio-alberto';
-
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-  ngOnInit() {
+
+  ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      AOS.init({});
+      AOS.init();
+      window.addEventListener('load', () => AOS.refresh());
     }
   }
 }
