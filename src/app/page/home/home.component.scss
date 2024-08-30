@@ -204,21 +204,18 @@ $color2: #FFFF;
         justify-content: center;
         align-items: center;
         gap: 60px;
-        max-width: 22rem;
-        div{
-            div{
-                gap: 1px;
-            }
-        }
-        
+        max-width: 23rem;
         h1{
-            font-size: xx-large;
+            font-size: 1.7em;
+            margin-top: 16px;
         }
         h2{
-            font-size: x-large;
+            font-size: 1.3em;
         }
         .icon-size{
             transform: scale(0.8);
+            transform-origin: top;
+            margin: 0;
         } 
     }
     .footer{
@@ -250,7 +247,7 @@ $color2: #FFFF;
             margin-top: 16px;
         }
         h2{
-            font-size: 1.1em;
+            font-size: 1.2em;
         }
         .icon-size{
             transform: scale(0.6);
@@ -296,12 +293,8 @@ $color2: #FFFF;
         height: auto;
     }
     .home-size-custom{
-        height: 120vh;
-    }
-    .icon-size {
-        transform: scale(0.6); 
-        width: 30px; 
-        height: 15px; 
+        height: auto;
+        padding:  60px 0px 60px 0px;
     }
 }
 

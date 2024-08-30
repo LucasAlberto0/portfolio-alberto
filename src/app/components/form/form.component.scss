@@ -87,6 +87,10 @@ button:focus-visible::after{
 }
 
 @media(max-width: 900px){
+    [data-aos="flip-left"] {
+        transform: none !important;
+        transition: none !important; 
+    }
     article{
         min-width: 40rem;
         max-width: 44rem;
@@ -123,8 +127,7 @@ button:focus-visible::after{
         transform-origin: left;
     } 
     .icon-size{
-        transform: scale(0.7);
-        padding: 0;
+        transform: scale(1.1);
     } 
     .text-gray-custom{
         font-size: 1.2em;
@@ -162,10 +165,11 @@ button:focus-visible::after{
         margin-bottom: 30px;  
     }
     .icon-size{
-        transform: scale(1);
+        transform: scale(1.1);
         padding: 0;
         width: 2em;
         transform-origin: left;
+        transition: none;
     } 
     .icon-size1{
         transform: scale(0.9);
@@ -208,16 +212,12 @@ button:focus-visible::after{
         width: 100%;
         font-size: 0.9em;
     } 
-    .flex-custom{
-        gap: 0;
-    }
     .icon-size{
-        transform: scale(1.4);
-        padding: 0;
+        transform: scale(1.7);
+        margin-right: 8px;
     } 
     .icon-size1{
         transform: scale(0.8);
-        padding: 0;
         width: 2em;
         transform-origin: left;
     } 
@@ -259,10 +259,8 @@ button:focus-visible::after{
         gap: 0;
     }
     .icon-size{
-        transform: scale(0.9);
-        padding: 0;
-        width: 2em;
-        transform-origin: left;
+        transform: scale(1.1);
+        margin-right: 4px;
     } 
     .icon-size1{
         transform: scale(0.6);

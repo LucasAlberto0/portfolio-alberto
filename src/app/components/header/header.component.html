@@ -13,7 +13,7 @@
             </ul>
         </nav>
         <nav class="mobile transition_on" data-aos="fade-left" data-aos-delay="150">
-            <div class="hamburguer-bt mobile" [ngClass]="{'ativo': menuAtivo}" (click)="toggleMenu()">
+            <div class="hamburguer-bt mobile" [ngClass]="{'ativo': menuAtivo}" (click)="toggleMenu()" >
                 <div class="hamburguer_line hamburguer-top"></div>
                 <div class="hamburguer_line hamburguer-middle"></div>
                 <div class="hamburguer_line hamburguer-bottom"></div>
@@ -21,7 +21,7 @@
         </nav>
         <div id="opt_menu" class="mobile transition_on capriola" [ngClass]="{'ativo': menuAtivo}" >
             <ul>
-                <li data-aos="fade-left" data-aos-delay="150"><a href="#home">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#experiencia">Experiência</a></li>
                 <li><a href="#projetos">Projetos</a></li>

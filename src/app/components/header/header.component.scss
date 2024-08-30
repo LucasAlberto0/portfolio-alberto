@@ -1,5 +1,8 @@
 
-
+.transition_on *,
+.transition_on {
+    transition: ease .5s all;
+}
 .container{
     margin: auto;
 }
@@ -65,7 +68,7 @@ li{
     height: 100%;
     font-size: 20px;
     color: white;
-    transition: all 300ms;
+    transition: all 600ms;
 }
 
 nav {
