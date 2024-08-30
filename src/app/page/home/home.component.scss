@@ -9,7 +9,6 @@ $color2: #FFFF;
 
 
 
-
     html{
         scroll-behavior: smooth;
     }
@@ -23,12 +22,21 @@ $color2: #FFFF;
     .size-1x5x{
         height: 150vh;
     }
-  
+
+    .home-size-custom,
+    .projects-size-custom,
+    .experience-size-custom,
+    .about-size-custom,
+    .form-size-custom{
+        width: 100%;
+    }
+
 @media(max-width: 1540px){
     h1{
         font-size: 3em;
     }
 }
+
 @media(max-width: 1281px){
     .projects-size-custom{
         padding: 70px 0px 70px 0px;
@@ -46,7 +54,7 @@ $color2: #FFFF;
     .size-1x{
         height: none;
     }
-
+    
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
@@ -60,8 +68,12 @@ $color2: #FFFF;
         
         align-items: center;
         flex-direction: row;
-        max-width: 52.5rem;
+        
+        max-width: 52.5rem; 
         div{
+        .flex-custom{
+            gap: 2px;
+        } 
             div{
                 gap: 20px;
             }
@@ -76,13 +88,10 @@ $color2: #FFFF;
         
         .icon-size{
             margin-top: 20px;
-            transform: scale(0.8);
-            transform-origin: left;
-            width: 30px;
-            height: 20px;
-            
+            transform: scale(1);     
         } 
-    }
+    } 
+    
     .footer{
         font-size: 1em;
     }
@@ -124,8 +133,7 @@ $color2: #FFFF;
         .icon-size{
             margin-top: 20px;
             transform: scale(1);
-            width: 40px;
-            height: 20px;
+        
             
         } 
     }
@@ -153,7 +161,10 @@ $color2: #FFFF;
         align-items: center;
         gap: 60px;
         max-width: 29.4rem;
-        div{
+        div{ 
+        .flex-custom{
+            gap: 0px;
+        }
             div{
                 gap: 1px;
             }
@@ -166,9 +177,8 @@ $color2: #FFFF;
             font-size: 1.8em;
         }
         .icon-size{
-            transform: scale(0.8);
-            width: 50px;
-            height: 20px;
+            margin-top: 20px;
+            transform: scale(0.8);  
         } 
     }
     .footer{
@@ -208,9 +218,7 @@ $color2: #FFFF;
             font-size: x-large;
         }
         .icon-size{
-            transform: scale(0.7);
-            width: 40px;
-            height: 20px;
+            transform: scale(0.8);
         } 
     }
     .footer{
@@ -237,22 +245,17 @@ $color2: #FFFF;
         align-items: center;
         gap: 15px;
         max-width: 19rem;
-        div{
-            div{
-                gap: 1px;
-            }
-        }
-        
         h1{
             font-size: 1.4em;
+            margin-top: 16px;
         }
         h2{
             font-size: 1.1em;
         }
         .icon-size{
-            transform: scale(0.7);
-            width: 40px;
-            height: 20px;
+            transform: scale(0.6);
+            transform-origin: top;
+            margin: 0;
         } 
     }
     .footer{
