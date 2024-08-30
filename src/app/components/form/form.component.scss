@@ -13,6 +13,14 @@ button{
     isolation: isolate;
 }
 
+.icon-size {
+    transition: transform 0.3s ease;
+}
+
+.icon-size:hover {
+    transform: scale(1.2); 
+}
+
 button::after{
     content: '';
     position: absolute;
@@ -37,7 +45,7 @@ button:focus-visible::after{
         max-width: 54.5rem;
     }
     form{
-        font-size: 1.3em;
+        font-size: 1.1em;
         button{
             height: 60px;
         }

@@ -7,6 +7,13 @@ $color2: #FFFF;
     box-sizing: border-box;
     }
 
+    .icon-size {
+        transition: transform 0.3s ease;
+    }
+    
+    .icon-size:hover {
+        transform: scale(1.2); 
+    }
 
 
     html{
@@ -85,11 +92,6 @@ $color2: #FFFF;
         h2{
             font-size: 2em;
         }
-        
-        .icon-size{
-            margin-top: 20px;
-            transform: scale(1);     
-        } 
     } 
     
     .footer{
