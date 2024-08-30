@@ -98,6 +98,13 @@ h2{
         right: -0.5em;
     }
 
+    .icon-size1{
+        transform-origin: right;
+    } 
+    .icon-size2{
+        transform-origin: left;
+    } 
+
     @media screen and (max-width: 1150px) {
         .timeline {
             max-width: 50rem;
@@ -169,14 +176,9 @@ h2{
     }  
     .icon-size1{
         transform: scale(0.8);
-        padding: 0;
-        width: 2em;
     } 
     .icon-size2{
         transform: scale(0.8);
-        transform-origin: left;
-        padding: 0;
-        width: 2em;
     } 
     .text-md{
         font-size: 1.3em;
@@ -216,15 +218,10 @@ h2{
         margin-bottom: 30px;
     }  
     .icon-size1{
-        transform: scale(0.7);
-        padding: 0;
-        width: 2em;
+        transform: scale(0.9);       
     } 
     .icon-size2{
-        transform: scale(0.7);
-        transform-origin: left;
-        padding: 0;
-        width: 2em;
+        transform: scale(0.9);
     } 
     .text-md{
         font-size: 0.9em;
@@ -265,15 +262,10 @@ h2{
         margin-bottom: 30px;
     }  
     .icon-size1{
-        transform: scale(0.6);
-        padding: 0;
-        width: 2em;
+        transform: scale(0.8);
     } 
     .icon-size2{
-        transform: scale(0.6);
-        transform-origin: left;
-        padding: 0;
-        width: 2em;
+        transform: scale(0.8);
     } 
     .text-md{
         font-size: 0.7em;
@@ -330,14 +322,9 @@ h2{
     }  
     .icon-size1{
         transform: scale(0.6);
-        padding: 0;
-        width: 2em;
     } 
     .icon-size2{
         transform: scale(0.6);
-        transform-origin: left;
-        padding: 0;
-        width: 2em;
     } 
     .text-md{
         font-size: 0.7em;
