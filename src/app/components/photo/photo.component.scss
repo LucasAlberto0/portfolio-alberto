@@ -47,16 +47,27 @@ img{
 
 @media(max-width: 1070px) {
     .box{
-        width: 280px;
-        height: 280px;
+        width: 320px;
+        height: 320px;
 }
 img{
-    width: 260px;
-    height: 260px;
+    width: 290px;
+    height: 290px;
 }
 }
 
 @media(max-width: 900px) {
+    .box{
+        width: 290px;
+        height: 290px;
+}
+img{
+    width: 270px;
+    height: 270px;
+}
+}
+
+@media(max-width: 710px) {
     .box{
         width: 260px;
         height: 260px;
@@ -65,49 +76,38 @@ img{
     width: 230px;
     height: 230px;
 }
-}
-
-@media(max-width: 710px) {
-    .box{
-        width: 230px;
-        height: 230px;
-}
-img{
-    width: 200px;
-    height: 200px;
-}
 
 }
 
 @media(max-width: 480px) {
     .box{
-        width: 200px;
-        height: 200px;
+        width: 240px;
+        height: 240px;
 }
 img{
-    width: 170px;
-    height: 170px;
+    width: 210px;
+    height: 210px;
 }
 }
 
 @media(max-width: 370px) {
     .box{
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
 }
 img{
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
 }
 }
 
 @media (max-height: 500px) and (orientation: landscape) {
     .box{
-        width: 180px;
-        height: 180px;
+        width: 220px;
+        height: 220px;
     }
     img{
-        width: 160px;
-        height: 160px;
+        width: 180px;
+        height: 180px;
     }
 }
