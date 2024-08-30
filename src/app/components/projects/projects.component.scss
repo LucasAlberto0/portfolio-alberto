@@ -7,9 +7,15 @@ aside:hover > :not(:hover){
         transform: scale(0.9);
 }
 
+.white-filter {
+        filter: brightness(0) invert(1);
+    }
+
 span{
         font-weight: bold;
 }
+
+
 
 @media(max-width: 1070px){
         article{
