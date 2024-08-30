@@ -272,15 +272,28 @@ $color2: #FFFF;
 }
 
 
+
+
 @media (max-height: 500px) and (orientation: landscape) {
     .content-1{
         max-width: 650px;
+        h1{
+            font-size: 2em;
+        }
+        h2{
+            font-size: 1.5em;
+        }
     }
-    h1 {
-        font-size: x-large; 
+    
+    .projects-size-custom,
+    .experience-size-custom,
+    .about-size-custom,
+    .form-size-custom {   
+        padding: 80px 0px 80px 0px;
+        height: auto;
     }
-    h2 {
-        font-size: medium; 
+    .home-size-custom{
+        height: 120vh;
     }
     .icon-size {
         transform: scale(0.6); 

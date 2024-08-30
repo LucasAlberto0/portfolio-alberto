@@ -11,14 +11,16 @@
     gap: 0.4rem;
 }
 
-
-
-.capriola{
-    font-family: 'Capriola';
+html{
+    scroll-behavior: smooth;
 }
 
-.olden{
-    font-family: 'Quando';
+.capriola{
+    font-family: 'Capriola'; //capriola
+}
+
+.quando{
+    font-family: 'Quando'; //olden
 }
 
 ::-webkit-scrollbar{
