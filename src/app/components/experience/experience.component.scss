@@ -232,6 +232,10 @@ h2{
 }
 
 @media(max-width: 480px){
+    .capriola{
+        font-size: 0.7em;
+    }
+    
     .timeline{
         max-width: 19rem;
     }
@@ -246,7 +250,6 @@ h2{
     }
     p{
         color: rgb(174, 174, 211);
-        font-size: 0.7em;
         letter-spacing: 1px;
     }
     .checkpoint{

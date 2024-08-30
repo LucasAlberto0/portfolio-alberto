@@ -1,4 +1,5 @@
 
+
 .container{
     margin: auto;
 }
@@ -67,30 +68,27 @@ li{
     transition: all 300ms;
 }
 
-li:hover{
-    color: gray;
-    cursor: pointer;
-}
-li:after{
-    content: '';
-    bottom: 0;
-    width: 0;
-    height: 3px;
-    position: absolute;
-    background-color: gray;
-    transition: width 300ms, left 300ms;
-}
-
-li:hover::after{
-    width: 100%;
-}
-
-nav li:after{
-    left: 50%;
-}
-
-nav li:hover::after{
-    left: 0;
+nav {
+    li { 
+    &:hover {
+        color: gray;
+        cursor: pointer; 
+        &::after {
+        width: 100%;
+        left: 0;
+        }
+    } 
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background-color: gray;
+        transition: width 300ms, left 300ms;
+        left: 50%;
+    }
+    }
 }
 
 
@@ -173,6 +171,7 @@ nav li:hover::after{
         margin: -12px 15px;
         margin-bottom: -25px;
         float: right;
+
     }
 
     header .hamburguer-bt .hamburguer_line {
@@ -193,7 +192,9 @@ nav li:hover::after{
 
     header .hamburguer-bt.ativo .hamburguer-bottom {
         transform: rotate(-45deg);
+        transition: 300ms;
         margin-top: -18px;
+        
     }
 
     header #opt_menu {
@@ -274,12 +275,6 @@ nav li:hover::after{
         max-width: 36.5rem;
     }
     
-    header.rolagem{
-        background-color: rgb(44, 43, 43);
-        padding: 2px 2%;
-        color: white;
-        
-    }
     header{ 
         img{
         margin: 13px;
@@ -308,10 +303,11 @@ nav li:hover::after{
         height: 20px;
     }
     #opt_menu {
-        top: 50px;
+        top: 54px;
+
     }
     .fundo_menu {
-        top: 50px;
+        top: 54px;
     }
     }
 }

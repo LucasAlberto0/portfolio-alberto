@@ -1,8 +1,8 @@
 <header id="header">
     <div class="container 2xl:max-w-7xl xl:max-w-6xl md:max-w-5xl sm:max-w-2xl xs:max-w-xl">
     <div class="flex">
-        <a href="" class="flex justify-center"><img src="/assinatura.png" class="white-filter"></a>
-        <nav class="desktop capriola">
+        <a href="#home" class="flex justify-center" data-aos="fade-right" data-aos-delay="150"><img src="/assinatura.png" class="white-filter"></a>
+        <nav class="desktop capriola" data-aos="fade-left" data-aos-delay="150">
             <ul>
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#sobre">SOBRE</a></li>
@@ -11,16 +11,16 @@
                 <li><a href="#contato">CONTATO</a></li>
             </ul>
         </nav>
-        <nav class="mobile transition_on">
+        <nav class="mobile transition_on" data-aos="fade-left" data-aos-delay="150">
             <div class="hamburguer-bt mobile" [ngClass]="{'ativo': menuAtivo}" (click)="toggleMenu()">
                 <div class="hamburguer_line hamburguer-top"></div>
                 <div class="hamburguer_line hamburguer-middle"></div>
                 <div class="hamburguer_line hamburguer-bottom"></div>
             </div>
         </nav>
-        <div id="opt_menu" class="mobile transition_on" [ngClass]="{'ativo': menuAtivo}">
+        <div id="opt_menu" class="mobile transition_on capriola" [ngClass]="{'ativo': menuAtivo}" >
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li data-aos="fade-left" data-aos-delay="150"><a href="#home">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#experiencia">Experiência</a></li>
                 <li><a href="#projetos">Projetos</a></li>

@@ -29,7 +29,5 @@ export class HeaderComponent {
       header.classList.toggle('rolagem', window.scrollY > 600);
     }
   }
-
-  
 }
 
