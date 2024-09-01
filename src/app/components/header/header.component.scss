@@ -262,6 +262,14 @@
     }
 
     @media (max-width: 710px) {
+    [data-aos="fade-left"] {
+            transform: none !important;
+            transition: none !important;
+    }
+    [data-aos="fade-right"] {
+        transform: none !important;
+        transition: none !important;
+}
     .container {
         max-width: 36.5rem;
     }

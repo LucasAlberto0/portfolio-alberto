@@ -137,6 +137,10 @@
     }
 
     @media (max-width: 710px) {
+    [data-aos="zoom-in"] {
+        transform: none !important;
+        transition: none !important;
+    }
     .size-1x {
         height: none;
     }
