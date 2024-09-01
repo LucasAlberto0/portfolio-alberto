@@ -20,8 +20,8 @@ img{
     width: 350px;
     height: 350px;
     border-radius: 100%;
-    object-fit: cover; /* Ajustado para cobrir a área sem distorcer a imagem */
-    clip-path: circle(50% at 50% 50%); /* Define um formato de círculo para a imagem */
+    object-fit: cover; 
+    clip-path: circle(50% at 50% 50%); 
 }
 
 .box::before{
@@ -30,8 +30,11 @@ img{
     width: 150px;
     height: 300%;
     background: linear-gradient(180deg, black,black );
-
     animation: animate 3s linear infinite;
+}
+
+.box:hover::before {
+    animation-duration: 1s; 
 }
 
 @keyframes animate {
@@ -112,5 +115,14 @@ img{
     img{
         width: 180px;
         height: 180px;
+    }
+}
+
+@media (pointer: coarse) { 
+    .box:active {
+        transform: scale(1);
+    }
+    .box:active::before {
+        animation-duration: 1s;
     }
 }
