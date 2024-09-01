@@ -138,8 +138,9 @@
 
     @media (max-width: 710px) {
     [data-aos="zoom-in"] {
+        animation: none !important; /* Remove qualquer animação */
+        transition: none !important; /* Remove qualquer transição */
         transform: none !important;
-        transition: none !important;
     }
     .size-1x {
         height: none;
