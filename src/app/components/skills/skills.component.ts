@@ -34,9 +34,6 @@ export class SkillsComponent implements AfterViewInit {
           const clone = slide.cloneNode(true) as HTMLElement;
           slideWrapper.appendChild(clone);
         });
-        
-
-        
         slideWrapper.style.width = `${totalWidth * 2}px`; 
       }
     }

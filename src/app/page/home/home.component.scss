@@ -1,313 +1,296 @@
-$color1: #0000; 
-$color2: #FFFF; 
-
-* {
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     }
 
     .icon-size {
-        transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
     }
-    
+
     .icon-size:hover {
-        transform: scale(1.2); 
+    transform: scale(1.2);
     }
 
-
-    html{
-        scroll-behavior: smooth;
+    html {
+    scroll-behavior: smooth;
     }
 
     .size-1x {
-        height: 100vh; 
-        }
-    .size-1x25x {
-        height: 125vh;
+    height: 100vh;
     }
-    .size-1x5x{
-        height: 150vh;
+    .size-1x25x {
+    height: 125vh;
+    }
+    .size-1x5x {
+    height: 150vh;
     }
 
     .home-size-custom,
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
-    .form-size-custom{
-        width: 100%;
+    .form-size-custom {
+    width: 100%;
     }
 
-@media(max-width: 1540px){
-    h1{
+    @media (max-width: 1540px) {
+    h1 {
         font-size: 3em;
     }
-}
+    }
 
-@media(max-width: 1281px){
-    .projects-size-custom{
+    @media (max-width: 1281px) {
+    .projects-size-custom {
         padding: 70px 0px 70px 0px;
         height: auto;
     }
-    h1{
+    h1 {
         font-size: 2.7em;
     }
-    h2{
+    h2 {
         font-size: 2.2em;
     }
-}
+    }
 
-@media(max-width: 1070px) {
-    .size-1x{
+    @media (max-width: 1070px) {
+    .size-1x {
         height: none;
     }
-    
+
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
-    .form-size-custom {   
+    .form-size-custom {
         padding: 60px 0px 60px 0px;
         height: auto;
-        
     }
-    .content-1{
+    .content-1 {
         display: flex;
-        
+
         align-items: center;
         flex-direction: row;
-        
-        max-width: 52.5rem; 
-        div{
-        .flex-custom{
+
+        max-width: 52.5rem;
+        div {
+        .flex-custom {
             gap: 2px;
-        } 
-            div{
-                gap: 20px;
-            }
         }
-        
-        h1{
-            font-size: 2.4em;
+        div {
+            gap: 20px;
         }
-        h2{
-            font-size: 2em;
         }
-    } 
-    
-    .footer{
+
+        h1 {
+        font-size: 2.4em;
+        }
+        h2 {
+        font-size: 2em;
+        }
+    }
+
+    .footer {
         font-size: 1em;
     }
-}
+    }
 
-@media(max-width: 900px) {
-    .size-1x{
+    @media (max-width: 900px) {
+    .size-1x {
         height: none;
     }
 
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
-    .form-size-custom {   
+    .form-size-custom {
         padding: 60px 0px 60px 0px;
         height: auto;
-        
     }
-    .content-1{
+    .content-1 {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         gap: 60px;
         max-width: 46rem;
-        div{
-            div{
-                gap: 20px;
-            }
+        div {
+        div {
+            gap: 20px;
         }
-        
-        h1{
-            font-size: 2.7em;
         }
-        h2{
-            font-size: 2.2em;
+
+        h1 {
+        font-size: 2.7em;
         }
-        
-        .icon-size{
-            margin-top: 20px;
-            transform: scale(1);
-        
-            
-        } 
+        h2 {
+        font-size: 2.2em;
+        }
+
+        .icon-size {
+        margin-top: 20px;
+        transform: scale(1);
+        }
     }
-    .footer{
+    .footer {
         font-size: 0.8em;
     }
-}
+    }
 
-@media(max-width: 710px) {
-    .size-1x{
+    @media (max-width: 710px) {
+    .size-1x {
         height: none;
     }
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
-    .form-size-custom {   
+    .form-size-custom {
         padding: 50px 0px 50px 0px;
         height: auto;
-        
     }
-    .content-1{
+    .content-1 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 60px;
         max-width: 29.4rem;
-        div{ 
-        .flex-custom{
+        div {
+        .flex-custom {
             gap: 0px;
         }
-            div{
-                gap: 1px;
-            }
+        div {
+            gap: 1px;
         }
-        
-        h1{
-            font-size: 2.1em;
         }
-        h2{
-            font-size: 1.8em;
+
+        h1 {
+        font-size: 2.1em;
         }
-        .icon-size{
-            margin-top: 20px;
-            transform: scale(0.8);  
-        } 
+        h2 {
+        font-size: 1.8em;
+        }
+        .icon-size {
+        margin-top: 20px;
+        transform: scale(0.8);
+        }
     }
-    .footer{
+    .footer {
         font-size: 0.8em;
     }
-}
+    }
 
-@media(max-width: 480px) {
-    .size-1x{
+    @media (max-width: 480px) {
+    .size-1x {
         height: none;
     }
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
-    .form-size-custom {   
+    .form-size-custom {
         padding: 50px 0px 50px 0px;
         height: auto;
-        
     }
-    .content-1{
+    .content-1 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 60px;
         max-width: 23rem;
-        h1{
-            font-size: 1.5em;
-            margin-top: 16px;
+        h1 {
+        font-size: 1.5em;
+        margin-top: 16px;
         }
-        h2{
-            font-size: 1.2em;
+        h2 {
+        font-size: 1.2em;
         }
-        .icon-size{
-            transform: scale(0.8);
-            transform-origin: top;
-            margin: 0;
-        } 
+        .icon-size {
+        transform: scale(0.8);
+        transform-origin: top;
+        margin: 0;
+        }
     }
-    .footer{
+    .footer {
         font-size: 0.7em;
     }
-}
+    }
 
-@media(max-width: 370px) {
-    .size-1x{
+    @media (max-width: 370px) {
+    .size-1x {
         height: none;
     }
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
-    .form-size-custom {   
+    .form-size-custom {
         padding: 30px 0px 30px 0px;
         height: auto;
     }
-    
-    .content-1{
+
+    .content-1 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 15px;
         max-width: 19rem;
-        h1{
-            font-size: 1.4em;
-            margin-top: 16px;
+        h1 {
+        font-size: 1.4em;
+        margin-top: 16px;
         }
-        h2{
-            font-size: 1.2em;
+        h2 {
+        font-size: 1.2em;
         }
-        .icon-size{
-            transform: scale(0.6);
-            transform-origin: top;
-            margin: 0;
-        } 
+        .icon-size {
+        transform: scale(0.6);
+        transform-origin: top;
+        margin: 0;
+        }
     }
-    .footer{
+    .footer {
         font-size: 0.7em;
     }
-}
+    }
 
-@media (max-height: 800px){
-    
+    @media (max-height: 800px) {
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
-    .form-size-custom {   
+    .form-size-custom {
         padding: 80px 0px 80px 0px;
         height: auto;
     }
-}
+    }
 
-
-
-
-@media (max-height: 500px) and (orientation: landscape) {
-    .content-1{
+    @media (max-height: 500px) and (orientation: landscape) {
+    .content-1 {
         max-width: 650px;
-        h1{
-            font-size: 2em;
+        h1 {
+        font-size: 2em;
         }
-        h2{
-            font-size: 1.5em;
+        h2 {
+        font-size: 1.5em;
         }
     }
-    
+
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
-    .form-size-custom {   
+    .form-size-custom {
         padding: 80px 0px 80px 0px;
         height: auto;
     }
-    .home-size-custom{
+    .home-size-custom {
         height: auto;
-        padding:  60px 0px 60px 0px;
+        padding: 60px 0px 60px 0px;
     }
-}
+    }
 
-@media(max-width: 350px) {
-
-    .size-custom1{
+    @media (max-width: 350px) {
+    .size-custom1 {
         height: 170vh;
     }
-    .size-custom2{
+    .size-custom2 {
         height: 135vh;
     }
-
-
-}
+    }

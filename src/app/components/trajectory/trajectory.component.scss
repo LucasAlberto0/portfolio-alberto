@@ -1,332 +1,323 @@
-*{
+    * {
     margin: 0;
     padding: 0;
-}
+    }
 
-
-h1{
+    h1 {
     margin: 0.3em;
     font-size: 2em;
-}
+    }
 
-h2{
+    h2 {
     margin-bottom: 0.5em;
-}
+    }
 
-.title{
+    .title {
     text-align: center;
 
-    p{
+    p {
         color: rgb(174, 174, 211);
         font-size: 1.3em;
         letter-spacing: 2px;
     }
-}
+    }
 
-.timeline{
+    .timeline {
     max-width: 34.15em;
-}
+    }
 
-.title2{
+    .title2 {
     font-size: 2.8em;
     margin-bottom: 60px;
-} 
+    }
 
-.checkpoint{
+    .checkpoint {
     max-width: 34em;
     padding-top: 2em;
     padding-bottom: 2em;
     position: relative;
 
-    div{
+    div {
         border: 3px solid #888;
         border-radius: 1em;
         padding: 1.5em;
     }
-    p{
+    p {
         line-height: 22px;
         color: #ccc;
     }
-    
-}
-.left {
-        border-left: 3px solid #888;
-        padding-left: 3em;
-        transform: translateX(17em);
+    }
+    .left {
+    border-left: 3px solid #888;
+    padding-left: 3em;
+    transform: translateX(17em);
     }
 
-    .right{
-        border-right: 3px solid #888;
-        padding-right: 3em;
-        transform: translateX(-16.8em);
+    .right {
+    border-right: 3px solid #888;
+    padding-right: 3em;
+    transform: translateX(-16.8em);
     }
 
     .left::before,
     .right::before {
-        content: '';
-        background: #888;
-        width: 3em;
-        height: 3px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
-    .left::before{
-        left: 0;
+    content: "";
+    background: #888;
+    width: 3em;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     }
 
-    .right::before{
-        right: 0;
+    .left::before {
+    left: 0;
+    }
+
+    .right::before {
+    right: 0;
     }
 
     .left div::before,
     .right div::before {
-        content: '';
-        background: #fff;
-        width: 0.8em;
-        height: 0.8em;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        border-radius: 50%;
+    content: "";
+    background: #fff;
+    width: 0.8em;
+    height: 0.8em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
     }
-    .left div::before{
-        left: -0.5em;
+    .left div::before {
+    left: -0.5em;
     }
-    .right div::before{
-        right: -0.5em;
+    .right div::before {
+    right: -0.5em;
     }
 
-    .icon-size1{
-        transform-origin: right;
-    } 
-    .icon-size2{
-        transform-origin: left;
-    } 
+    .icon-size1 {
+    transform-origin: right;
+    }
+    .icon-size2 {
+    transform-origin: left;
+    }
 
     @media screen and (max-width: 1150px) {
-        .timeline {
-            max-width: 50rem;
+    .timeline {
+        max-width: 50rem;
+    }
+    .checkpoint {
+        max-width: 65rem;
+        width: 100%;
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+
+        &::before {
+        width: 3px;
+        height: 4em;
+        top: -2em;
+        left: 50%;
+        transform: translateX(-50%);
         }
-        .checkpoint{
-            max-width: 65rem;
-            width: 100%;
-            transform: none;
-            padding-left: 0;
-            padding-right: 0;
-            border: none;
 
-            &::before {
-                width: 3px;
-                height: 4em;
-                top: -2em;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            div::before{
-                top: -0.5em;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
+        div::before {
+        top: -0.5em;
+        left: 50%;
+        transform: translateX(-50%);
         }
-}
+    }
+    }
 
-@media(max-width:1070px){
-    .timeline{
+    @media (max-width: 1070px) {
+    .timeline {
         max-width: 54.5rem;
     }
-    .title2{
+    .title2 {
         font-size: 2.4em;
         margin-bottom: 50px;
-    }  
-}
+    }
+    }
 
-@media(max-width: 900px){
-    .timeline{
+    @media (max-width: 900px) {
+    .timeline {
         max-width: 44rem;
     }
-    .checkpoint{
+    .checkpoint {
         max-width: 100%;
         max-height: 18em;
         padding-top: 1.4em;
         padding-bottom: 1.5em;
-        div{
-            padding: 0.7em;
+        div {
+        padding: 0.7em;
         }
     }
-    p{
+    p {
         color: rgb(174, 174, 211);
         font-size: 1em;
         letter-spacing: 1px;
     }
-    .checkpoint{
+    .checkpoint {
         &::before {
-            width: 3px;
-            height: 3em;
-            top: -1.6em;
+        width: 3px;
+        height: 3em;
+        top: -1.6em;
         }
-
     }
-    .title2{
+    .title2 {
         font-size: 2.2em;
         margin-bottom: 40px;
-    }  
-    .icon-size1{
+    }
+    .icon-size1 {
         transform: scale(0.8);
-    } 
-    .icon-size2{
+    }
+    .icon-size2 {
         transform: scale(0.8);
-    } 
-    .text-md{
+    }
+    .text-md {
         font-size: 1.3em;
     }
+    }
 
-    
-}
-
-@media(max-width: 710px){
-    .timeline{
+    @media (max-width: 710px) {
+    .timeline {
         max-width: 29.6rem;
     }
-    .checkpoint{
+    .checkpoint {
         max-width: 30em;
         max-height: 18em;
         padding-top: 1.4em;
         padding-bottom: 1.5em;
-        div{
-            padding: 0.7em;
+        div {
+        padding: 0.7em;
         }
     }
-    p{
+    p {
         color: rgb(174, 174, 211);
         font-size: 0.8em;
         letter-spacing: 1px;
     }
-    .checkpoint{
+    .checkpoint {
         &::before {
-            width: 3px;
-            height: 3em;
-            top: -1.6em;
+        width: 3px;
+        height: 3em;
+        top: -1.6em;
         }
-
     }
-    .title2{
+    .title2 {
         font-size: 1.8em;
         margin-bottom: 30px;
-    }  
-    .icon-size1{
-        transform: scale(0.9);       
-    } 
-    .icon-size2{
+    }
+    .icon-size1 {
         transform: scale(0.9);
-    } 
-    .text-md{
+    }
+    .icon-size2 {
+        transform: scale(0.9);
+    }
+    .text-md {
         font-size: 0.9em;
     }
-}
+    }
 
-@media(max-width: 480px){
-    .capriola{
+    @media (max-width: 480px) {
+    .capriola {
         font-size: 0.7em;
     }
-    
-    .timeline{
+
+    .timeline {
         max-width: 19rem;
     }
-    .checkpoint{
+    .checkpoint {
         max-width: 30em;
         max-height: 18em;
         padding-top: 1.4em;
         padding-bottom: 1.5em;
-        div{
-            padding: 0.7em;
+        div {
+        padding: 0.7em;
         }
     }
-    p{
+    p {
         color: rgb(174, 174, 211);
         letter-spacing: 1px;
     }
-    .checkpoint{
+    .checkpoint {
         &::before {
-            width: 3px;
-            height: 3em;
-            top: -1.6em;
+        width: 3px;
+        height: 3em;
+        top: -1.6em;
         }
-
     }
-    .title2{
+    .title2 {
         font-size: 1.6em;
         margin-bottom: 30px;
-    }  
-    .icon-size1{
+    }
+    .icon-size1 {
         transform: scale(0.8);
-    } 
-    .icon-size2{
+    }
+    .icon-size2 {
         transform: scale(0.8);
-    } 
-    .text-md{
+    }
+    .text-md {
         font-size: 0.7em;
     }
-}
+    }
 
-@media(max-width: 430px){
-    .timeline{
+    @media (max-width: 430px) {
+    .timeline {
         max-width: 23rem;
     }
-    p{
+    p {
         font-size: 0.6em;
     }
-}
+    }
 
-@media(max-width: 390px){
-    .timeline{
+    @media (max-width: 390px) {
+    .timeline {
         max-width: 22rem;
     }
-    p{
+    p {
         font-size: 0.6em;
     }
-}
+    }
 
-@media(max-width: 370px){
-    .timeline{
+    @media (max-width: 370px) {
+    .timeline {
         max-width: 22rem;
     }
-    .checkpoint{
+    .checkpoint {
         max-width: 30em;
         max-height: 18em;
         padding-top: 1.4em;
         padding-bottom: 1.5em;
-        div{
-            padding: 0.7em;
+        div {
+        padding: 0.7em;
         }
     }
-    p{
+    p {
         color: rgb(174, 174, 211);
         font-size: 0.7em;
         letter-spacing: 1px;
     }
-    .checkpoint{
+    .checkpoint {
         &::before {
-            width: 3px;
-            height: 3em;
-            top: -1.6em;
+        width: 3px;
+        height: 3em;
+        top: -1.6em;
         }
-
     }
-    .title2{
+    .title2 {
         font-size: 1.6em;
         margin-bottom: 30px;
-    }  
-    .icon-size1{
+    }
+    .icon-size1 {
         transform: scale(0.6);
-    } 
-    .icon-size2{
+    }
+    .icon-size2 {
         transform: scale(0.6);
-    } 
-    .text-md{
+    }
+    .text-md {
         font-size: 0.7em;
     }
-}
+    }
