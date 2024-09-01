@@ -1,3 +1,6 @@
+
+
+
 .box{
     position: relative;
     width: 400px;
@@ -9,16 +12,20 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-
+    transition: transform 0.3s ease;
+    &:hover{
+        transform: scale(1.1); 
+    }
 }
+
 img{
     position: relative;
     z-index: 2;
     width: 350px;
     height: 350px;
     border-radius: 100%;
-    object-fit: cover; /* Ajustado para cobrir a área sem distorcer a imagem */
-    clip-path: circle(50% at 50% 50%); /* Define um formato de círculo para a imagem */
+    object-fit: cover; 
+    clip-path: circle(50% at 50% 50%); 
 }
 
 .box::before{
@@ -100,6 +107,30 @@ img{
     height: 180px;
 }
 }
+
+@media(max-width: 340px) {
+    .box{
+        width: 170px;
+        height: 170px;
+}
+img{
+    width: 150px;
+    height: 150px;
+}
+}
+
+@media(max-width: 340px) {
+    .box{
+        width: 160px;
+        height: 160px;
+}
+img{
+    width: 140px;
+    height: 150px;
+}
+}
+
+
 
 @media (max-height: 500px) and (orientation: landscape) {
     .box{
