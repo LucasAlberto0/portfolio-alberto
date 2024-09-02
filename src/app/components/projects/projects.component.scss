@@ -10,7 +10,7 @@ span{
 @media(min-width: 900px){
 .hover-custom{
         transition: .35s;
-        cursor: pointer; 
+        cursor: default; 
 }
 aside:hover > :not(:hover){
         opacity: .5;
@@ -247,6 +247,5 @@ article{
                         height: 210px;
                 }
         }
- 
         }
         
