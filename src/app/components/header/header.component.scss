@@ -310,6 +310,12 @@
     }
     }
 
+    @media(max-width: 330px){
+        header {
+            background-color: transparent;
+        }
+    }
+
     @media (max-height: 800px) {
     header {
         width: 100%;

@@ -58,6 +58,10 @@
         height: none;
     }
 
+    .home-size-custom{
+        height: 100vh;
+    }
+
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
@@ -95,10 +99,6 @@
     }
 
     @media (max-width: 900px) {
-    .size-1x {
-        height: none;
-    }
-
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
@@ -142,9 +142,6 @@
         transition: none !important; /* Remove qualquer transição */
         transform: none !important;
     }
-    .size-1x {
-        height: none;
-    }
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
@@ -185,9 +182,6 @@
     }
 
     @media (max-width: 480px) {
-    .size-1x {
-        height: none;
-    }
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
@@ -221,14 +215,11 @@
     }
 
     @media (max-width: 370px) {
-    .size-1x {
-        height: none;
-    }
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
     .form-size-custom {
-        padding: 30px 0px 30px 0px;
+        padding: 40px 0px 40px 0px;
         height: auto;
     }
 
@@ -257,7 +248,7 @@
     }
     }
 
-    @media (max-height: 800px) {
+    @media (max-height: 770px) {
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
@@ -293,7 +284,7 @@
 
     @media (max-width: 350px) {
     .size-custom1 {
-        height: 170vh;
+        height: auto;
     }
     .size-custom2 {
         height: 135vh;
