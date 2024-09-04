@@ -137,11 +137,6 @@
     }
 
     @media (max-width: 710px) {
-    [data-aos="zoom-in"] {
-        animation: none !important; /* Remove qualquer animação */
-        transition: none !important; /* Remove qualquer transição */
-        transform: none !important;
-    }
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
@@ -219,7 +214,7 @@
     .experience-size-custom,
     .about-size-custom,
     .form-size-custom {
-        padding: 40px 0px 40px 0px;
+        padding: 30px 0px 30px 0px;
         height: auto;
     }
 
@@ -248,7 +243,7 @@
     }
     }
 
-    @media (max-height: 770px) {
+    @media  (min-width: 1024px) and (max-height: 770px) {
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,

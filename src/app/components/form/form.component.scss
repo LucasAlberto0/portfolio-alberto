@@ -240,7 +240,14 @@
     }
     }
 
-    @media (max-width: 359px) {
+    @media (max-width: 370px){
+        article{
+            min-width: 19rem;
+            max-width: 19rem;
+        }
+    }
+
+    @media (max-width: 340px) {
     article {
         min-width: 19em;
         max-width: 19rem;

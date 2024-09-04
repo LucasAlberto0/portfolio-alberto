@@ -161,8 +161,12 @@
         }
     }
     }
-
     @media (max-width: 370px) {
+        article {
+        max-width: 20rem;
+        }
+        }
+    @media (max-width: 340px) {
     .title {
         font-size: 1.6em;
         margin-bottom: 30px;
