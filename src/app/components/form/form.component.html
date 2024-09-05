@@ -4,9 +4,10 @@
         Contato
     </p>
     <div class="dad-div flex flex-row gap-36 capriola">
-        <form action="https://formsubmit.co/lucasalberto4321@gmail.com" method="POST"
+        <form action="https://api.staticforms.xyz/submit" method="POST"
             class="flex flex-col gap-6 form-width" data-aos="fade-down" data-aos-easing="linear"
             data-aos-duration="700">
+            <input type="hidden" name="accessKey" value="709f964c-4766-430c-9694-45ea8afb0628">
             <input type="text" name="name" class="border border-white text-white bg-black placeholder-gray-500 p-2"
                 placeholder="Digite seu nome e sobrenome" required>
             <input type="email" name="email" class="border border-white text-white bg-black placeholder-gray-500 p-2"
@@ -16,9 +17,8 @@
             <textarea name="message" placeholder="Sua mensagem..."
                 class="border border-white text-white bg-black placeholder-gray-500 p-2 h-36 resize-none"
                 required></textarea>
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://lucasalberto.site/agradecimento">
-            <button class="rounded-md h-12 font-bold hover:text-black" type="submit">Enviar</button>
+            <input type="hidden" name="redirectTo" value="https://lucasalberto.site/agradecimento">
+            <button class="rounded-md h-12 font-bold hover:text-black" type="submit" value="Submit">Enviar</button>
         </form>
         <aside>
             <h1 class="font-bold text-3xl mb-3 margin-custom1 quando">Email para contato</h1>
