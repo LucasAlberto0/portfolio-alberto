@@ -14,7 +14,7 @@
 .slide {
   flex: 0 0 auto;
   margin-right: 20px;
-  white-space: nowrap;
+  white-space: nowrap !important;
   transition: transform 0.3s ease;
 }
 
@@ -152,7 +152,7 @@
     .slide-wrapper {
       font-size: 0.5em;
       gap: 0;
-      animation: scroll 50s linear infinite;
+      animation: scroll 50s linear infinite !important;
 
       .slide {
         padding: 10px;

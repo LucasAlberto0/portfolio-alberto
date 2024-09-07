@@ -178,7 +178,7 @@
 
     @media (max-width: 480px) {
     .home-size-custom{
-        height: 100vh;
+        height: 100vh !important;
     }
     
     .projects-size-custom,
@@ -214,6 +214,11 @@
     }
 
     @media (max-width: 370px) {
+
+        .home-size-custom{
+            height: 100vh !important;
+        }
+    
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
