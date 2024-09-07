@@ -15,7 +15,9 @@
     html {
     scroll-behavior: smooth;
     }
-
+    .home-size-custom{
+        height: 100vh;
+    }
     .size-1x {
     height: 100vh;
     }
@@ -58,9 +60,6 @@
         height: none;
     }
 
-    .home-size-custom{
-        height: 100vh;
-    }
 
     .projects-size-custom,
     .experience-size-custom,
@@ -177,9 +176,6 @@
     }
 
     @media (max-width: 480px) {
-    .home-size-custom{
-        height: 100vh !important;
-    }
     
     .projects-size-custom,
     .experience-size-custom,
@@ -214,10 +210,6 @@
     }
 
     @media (max-width: 370px) {
-
-        .home-size-custom{
-            height: 100vh !important;
-        }
     
     .projects-size-custom,
     .experience-size-custom,
