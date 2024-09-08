@@ -260,7 +260,7 @@
         transform: scale(0.8);
     }
     .text-md {
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
     }
 
@@ -278,11 +278,11 @@
         max-width: 22rem;
     }
     p {
-        font-size: 0.6em;
+        font-size: 0.9em;
     }
     }
 
-    @media (max-width: 370px) {
+    @media (max-width: 350px) {
     .timeline {
         max-width: 22rem;
     }

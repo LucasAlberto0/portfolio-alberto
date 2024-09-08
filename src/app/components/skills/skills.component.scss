@@ -1,38 +1,26 @@
-
 .slide-wrapper {
   display: flex;
   flex-wrap: nowrap;
   width: fit-content;
-  animation: scroll 70s linear infinite;
-  -webkit-animation: scroll 70s linear infinite; 
+  animation: scroll 50s linear infinite;
   will-change: transform;
-  transform: translateZ(0); 
+}
+
+.slide:hover {
+  transition: 0.5ms;
+  animation-play-state: paused;
 }
 
 .slide {
   flex: 0 0 auto;
   margin-right: 20px;
-  white-space: nowrap;
+  white-space: nowrap ;
   transition: transform 0.3s ease;
 }
 
 .slide:hover {
-  transition: transform 0.5ms; 
   transform: scale(0.9);
 }
-
-
-@-webkit-keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -42,43 +30,34 @@
   }
 }
 
-
 @media (max-width: 1070px) {
   article {
     max-width: 54.5rem;
-  }
-  
-  .icon-size {
-    transform: scale(0.8);
-    padding: 0;
-    width: 2em;
-    transform-origin: left;
-  }
-  
-  .flex-custom {
-    gap: 0px;
-  }
-  
-  .text-5xl {
-    font-size: 2.4em;
-    margin-bottom: 40px;
-  }
-  
-  .slide-wrapper {
-    gap: 0;
-    animation: scroll 70s linear infinite; 
-    
-    .slide {
-      padding: 10px;
+    .icon-size {
+      transform: scale(0.8);
+      padding: 0;
+      width: 2em;
+      transform-origin: left;
     }
-    
-    img {
-      width: 4rem;
-      height: 4rem;
+    .flex-custom {
+      gap: 0px;
     }
-    
-    .text-xl {
-      font-size: 1.4em;
+    .text-5xl {
+      font-size: 2.4em;
+      margin-bottom: 40px;
+    }
+    .slide-wrapper {
+      gap: 0;
+      .slide {
+        padding: 10px;
+      }
+      img {
+        width: 4rem;
+        height: 4rem;
+      }
+      .text-xl {
+        font-size: 1.4em;
+      }
     }
   }
 }
@@ -86,39 +65,31 @@
 @media (max-width: 900px) {
   article {
     max-width: 44rem;
-  }
-  
-  .icon-size {
-    transform: scale(0.8);
-    padding: 0;
-    width: 2em;
-    transform-origin: left;
-  }
-  
-  .flex-custom {
-    gap: 0px;
-  }
-  
-  .text-5xl {
-    font-size: 2.2em;
-    margin-bottom: 40px;
-  }
-  
-  .slide-wrapper {
-    gap: 0;
-    animation: scroll 50s linear infinite; 
-    
-    .slide {
-      padding: 10px;
+    .icon-size {
+      transform: scale(0.8);
+      padding: 0;
+      width: 2em;
+      transform-origin: left;
     }
-    
-    img {
-      width: 3.7rem;
-      height: 3.7rem;
+    .flex-custom {
+      gap: 0px;
     }
-    
-    .text-xl {
-      font-size: 1.3em;
+    .text-5xl {
+      font-size: 2.2em;
+      margin-bottom: 40px;
+    }
+    .slide-wrapper {
+      gap: 0;
+      .slide {
+        padding: 10px;
+      }
+      img {
+        width: 3.7rem;
+        height: 3.7rem;
+      }
+      .text-xl {
+        font-size: 1.3em;
+      }
     }
   }
 }
@@ -126,40 +97,32 @@
 @media (max-width: 710px) {
   article {
     max-width: 29.5rem;
-  }
-  
-  .icon-size {
-    transform: scale(0.9);
-    padding: 0;
-    width: 2em;
-    transform-origin: left;
-  }
-  
-  .flex-custom {
-    gap: 0px;
-  }
-  
-  .text-5xl {
-    font-size: 1.8em;
-    margin-bottom: 30px;
-  }
-  
-  .capriola {
-    font-size: 0.3em;
-  }
-  
-  .slide-wrapper {
-    font-size: 0.6em;
-    gap: 0;
-    animation: scroll 70s linear infinite; 
-    
-    .slide {
-      padding: 10px;
+    .icon-size {
+      transform: scale(0.9);
+      padding: 0;
+      width: 2em;
+      transform-origin: left;
     }
-    
-    img {
-      width: 3.2rem;
-      height: 3.2rem;
+    .flex-custom {
+      gap: 0px;
+    }
+    .text-5xl {
+      font-size: 1.8em;
+      margin-bottom: 30px;
+    }
+    .capriola {
+      font-size: 0.3em;
+    }
+    .slide-wrapper {
+      font-size: 0.6em;
+      gap: 0;
+      .slide {
+        padding: 10px;
+      }
+      img {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
     }
   }
 }
@@ -167,90 +130,73 @@
 @media (max-width: 480px) {
   article {
     max-width: 22rem;
-  }
-  
-  .icon-size {
-    transform: scale(0.8);
-    padding: 0;
-    width: 2em;
-    transform-origin: left;
-  }
-  
-  .flex-custom {
-    gap: 0px;
-  }
-  
-  .text-5xl {
-    font-size: 1.6em;
-    margin-bottom: 30px;
-  }
-  
-  .slide-wrapper {
-    font-size: 0.5em;
-    gap: 0;
-    animation: scroll 50s linear infinite; 
-    
-    .slide {
-      padding: 10px;
+    .icon-size {
+      transform: scale(0.8);
+      padding: 0;
+      width: 2em;
+      transform-origin: left;
     }
-    
-    img {
-      width: 3rem;
-      height: 3rem;
+    .flex-custom {
+      gap: 0px;
     }
-    
-    .text-xl {
-      font-size: 1.7em;
+    .text-5xl {
+      font-size: 1.6em;
+      margin-bottom: 30px;
+    }
+    .slide-wrapper {
+      font-size: 0.5em;
+      gap: 0;
+      .slide {
+        padding: 10px;
+      }
+      img {
+        width: 3rem;
+        height: 3rem;
+      }
+      .text-xl {
+        font-size: 1.7em;
+      }
     }
   }
 }
 
-@media (max-width: 370px) {
-  article {
+@media (max-width: 370px){
+    article {
     max-width: 20rem;
-  }
+    }
 }
 
 @media (max-width: 340px) {
   article {
     max-width: 19rem;
-  }
-  
-  .icon-size {
-    transform: scale(0.6);
-    padding: 0;
-    width: 2em;
-    transform-origin: left;
-  }
-  
-  .flex-custom {
-    gap: 0px;
-  }
-  
-  .text-5xl {
-    display: none;
-  }
-  
-  .capriola {
-    font-size: 0.3em;
-  }
-  
-  .slide-wrapper {
-    font-size: 0.5em;
-    gap: 0;
-    animation: scroll 50s linear infinite; 
-    
-    .slide {
-      padding: 6px;
+    .icon-size {
+      transform: scale(0.6);
+      padding: 0;
+      width: 2em;
+      transform-origin: left;
     }
-    
-    img {
-      width: 3rem;
-      height: 3rem;
+    .flex-custom {
+      gap: 0px;
     }
-    
-    .text-xl {
+    .text-5xl {
       display: none;
+    }
+    .capriola {
+      font-size: 0.3em;
+    }
+    .slide-wrapper {
+      font-size: 0.5em;
+      gap: 0;
+      .slide {
+        padding: 6px;
+      }
+      img {
+        width: 3rem;
+        height: 3rem;
+      }
+      .text-xl {
+        display: none;
+      }
     }
   }
 }
