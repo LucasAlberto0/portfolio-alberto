@@ -131,6 +131,12 @@
     }
     }
 
+    @media (max-width: 1280px) {
+        .title2 {
+            font-size: 2.6em;
+        }
+        }
+
     @media (max-width: 1070px) {
     .timeline {
         max-width: 54.5rem;

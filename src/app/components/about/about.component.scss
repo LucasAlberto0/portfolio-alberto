@@ -41,6 +41,30 @@
     scale: 1 1;
     }
 
+    @media (max-width: 1280px) {
+        .title {
+            font-size: 2.6em;
+            margin-bottom: 40px;
+        }
+        .flex-custom {
+            gap: 0;
+        }
+        .icon-size {
+            transform: scale(1);
+            padding: 0;
+            transform-origin: left;
+        }
+        .content-1 {
+            div {
+            font-size: 1.5em;
+            }
+            span {
+            padding: 2px 5px;
+            }
+        }
+    }
+        
+
     @media (max-width: 1070px) {
     .title {
         font-size: 2.4em;

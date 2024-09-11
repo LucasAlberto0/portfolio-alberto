@@ -39,6 +39,19 @@
     scale: 1 1;
     }
 
+    @media (max-width: 1280px) {
+        .text-5xl {
+            font-size: 2.6em;
+            margin-bottom: 40px;
+        }
+        .text-3xl {
+            font-size: 1.7em;
+        }
+        .text-gray-custom {
+            font-size: 1.1em;
+        }
+        }
+
     @media (max-width: 1070px) {
     article {
         min-width: 52rem;

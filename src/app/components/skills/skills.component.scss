@@ -30,6 +30,31 @@
   }
 }
 
+@media (max-width: 1280px) {
+  article {
+    .icon-size {
+      transform: scale(1);
+      transform-origin: left;
+    }
+    .text-5xl {
+      font-size: 2.6em;
+    }
+    .slide-wrapper {
+      gap: 0;
+      .slide {
+        padding: 10px;
+      }
+      img {
+        width: 5rem;
+        height: 5rem;
+      }
+      .text-xl {
+        font-size: 1.4em;
+      }
+    }
+  }
+}
+
 @media (max-width: 1070px) {
   article {
     max-width: 54.5rem;
