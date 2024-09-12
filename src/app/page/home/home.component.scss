@@ -16,16 +16,19 @@
     scroll-behavior: smooth;
     }
     .home-size-custom {
-    min-height: 100vh;
-    }
-    .size-1x {
     height: 100vh;
     }
-    .size-1x25x {
-    height: 125vh;
+    .about-size-custom{
+        height: 100vh;
     }
-    .size-1x5x {
-    height: 150vh;
+    .experience-size-custom{
+        height: 125vh;
+    }
+    .projects-size-custom{
+        height: 150vh;
+    }
+    .form-size-custom{
+        height: 100vh;
     }
 
     .home-size-custom,
@@ -71,9 +74,6 @@
     }
 
     @media (max-width: 1070px) {
-    .size-1x {
-        height: none;
-    }
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
