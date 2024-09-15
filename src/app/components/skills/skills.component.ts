@@ -1,5 +1,5 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, CUSTOM_ELEMENTS_SCHEMA, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, AfterViewInit, Inject, PLATFORM_ID, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -8,10 +8,11 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA, AfterViewInit, Inject, PLATFORM_ID }
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
-
 })
-export class SkillsComponent implements AfterViewInit {
-  
+export class SkillsComponent implements AfterViewInit, OnDestroy {
+
+  private intervalId: any;
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit() {
@@ -25,14 +26,24 @@ export class SkillsComponent implements AfterViewInit {
         const spacing = parseInt(window.getComputedStyle(slides[0]).marginRight, 10);
         const totalWidth = (slideWidth + spacing) * totalSlides;
 
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 2; i++) {
           slides.forEach(slide => {
             const clone = slide.cloneNode(true) as HTMLElement;
             slideWrapper.appendChild(clone);
           });
         }
-        slideWrapper.style.width = `${totalWidth * 10}px`; 
+
+        slideWrapper.style.width = `${totalWidth * 2}px`;
+
+        // Remove the interval since we're handling the infinite loop with CSS
+        // No need to toggle the 'reverse' class; the animation will loop infinitely
       }
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
     }
   }
 }
