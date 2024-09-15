@@ -25,16 +25,13 @@ export class SkillsComponent implements AfterViewInit {
         const spacing = parseInt(window.getComputedStyle(slides[0]).marginRight, 10);
         const totalWidth = (slideWidth + spacing) * totalSlides;
 
-        
-        slides.forEach(slide => {
-          const clone = slide.cloneNode(true) as HTMLElement;
-          slideWrapper.appendChild(clone);
-        });
-        slides.forEach(slide => {
-          const clone = slide.cloneNode(true) as HTMLElement;
-          slideWrapper.appendChild(clone);
-        });
-        slideWrapper.style.width = `${totalWidth * 2}px`; 
+        for (let i = 0; i < 10; i++) {
+          slides.forEach(slide => {
+            const clone = slide.cloneNode(true) as HTMLElement;
+            slideWrapper.appendChild(clone);
+          });
+        }
+        slideWrapper.style.width = `${totalWidth * 10}px`; 
       }
     }
   }
