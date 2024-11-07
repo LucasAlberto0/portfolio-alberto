@@ -1,73 +1,42 @@
-.slide-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
-  width: fit-content;
-  animation: scrollForward 60s linear infinite;
-  will-change: transform;
-}
 
 .slide {
-  flex: 0 0 auto;
-  margin-right: 20px;
-  white-space: nowrap;
-  transition: transform 0.3s ease;
+  transition: transform 0.05s ease;
+  width: 180px;
+  height: 180px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.slide:hover {
-  transform: scale(0.9);
-}
 
-@keyframes scrollForward {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 
-@keyframes scrollBackward {
-  0% {
-    transform: translateX(-100%);
-  }
-  50% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
+  @media (min-width: 900px) {
+    .slide-box {
+    transition: 0.05s;
+    cursor: default;
+    }
+    .slide-box:hover > :not(:hover) {
+    opacity: 0.5;
+    transform: scale(0.9);
+    }
+    }
 
-.slide-wrapper.reverse {
-  animation: scrollBackward 60s linear infinite;
-}
-
-/* Ajustes responsivos */
 @media (max-width: 1280px) {
   article {
     .icon-size {
       transform: scale(1);
-      transform-origin: left;
     }
     .text-5xl {
       font-size: 2.6em;
     }
-    .slide-wrapper {
-      gap: 0;
-      .slide {
-        padding: 10px;
-      }
       img {
-        width: 5rem;
-        height: 5rem;
+        transform: scale(0.9);
       }
       .text-xl {
         font-size: 1.4em;
       }
-    }
   }
 }
 
@@ -80,26 +49,20 @@
       width: 2em;
       transform-origin: left;
     }
-    .flex-custom {
-      gap: 0px;
-    }
     .text-5xl {
       font-size: 2.4em;
       margin-bottom: 40px;
     }
-    .slide-wrapper {
-      gap: 0;
-      .slide {
-        padding: 10px;
-      }
+    .slide{
+      width: 160px;
+      height: 160px;
+    }
       img {
-        width: 4rem;
-        height: 4rem;
+        transform: scale(0.8);
       }
       .text-xl {
-        font-size: 1.4em;
+        font-size: 1.3em;
       }
-    }
   }
 }
 
@@ -108,96 +71,62 @@
     max-width: 44rem;
     .icon-size {
       transform: scale(0.8);
-      padding: 0;
-      width: 2em;
-      transform-origin: left;
-    }
-    .flex-custom {
-      gap: 0px;
     }
     .text-5xl {
       font-size: 2.2em;
       margin-bottom: 40px;
     }
-    .slide-wrapper {
-      gap: 0;
-      .slide {
-        padding: 10px;
-      }
       img {
-        width: 3.7rem;
-        height: 3.7rem;
+        transform: scale(0.7);
       }
       .text-xl {
         font-size: 1.3em;
       }
-    }
   }
 }
 
 @media (max-width: 710px) {
   article {
-    max-width: 29.5rem;
+    max-width: 32rem;
     .icon-size {
       transform: scale(0.9);
-      padding: 0;
-      width: 2em;
-      transform-origin: left;
-    }
-    .flex-custom {
-      gap: 0px;
     }
     .text-5xl {
       font-size: 1.8em;
-      margin-bottom: 30px;
     }
-    .capriola {
-      font-size: 0.3em;
+    .slide{
+      width: 150px;
+      height: 150px;
+      padding: 30px;
     }
-    .slide-wrapper {
-      font-size: 0.6em;
-      gap: 0;
-      .slide {
-        padding: 10px;
-      }
       img {
-        width: 3.2rem;
-        height: 3.2rem;
+        transform: scale(0.7);
       }
-    }
+  }
+}
+
+@media (max-width: 530px){
+  article{
+    max-width: 22rem;
   }
 }
 
 @media (max-width: 480px) {
   article {
-    max-width: 22rem;
     .icon-size {
       transform: scale(0.8);
-      padding: 0;
-      width: 2em;
-      transform-origin: left;
-    }
-    .flex-custom {
-      gap: 0px;
     }
     .text-5xl {
       font-size: 1.6em;
       margin-bottom: 30px;
     }
-    .slide-wrapper {
-      font-size: 0.5em;
-      gap: 0;
-      .slide {
-        padding: 10px;
-      }
-      img {
-        width: 3rem;
-        height: 3rem;
-      }
-      .text-xl {
-        font-size: 1.7em;
-      }
+    .slide{
+      width: 140px;
+      height: 130px;
     }
+      img {
+        transform: scale(0.7);
+      }
   }
 }
 
@@ -210,34 +139,11 @@
 @media (max-width: 340px) {
   article {
     max-width: 19rem;
-    .icon-size {
-      transform: scale(0.6);
-      padding: 0;
-      width: 2em;
-      transform-origin: left;
-    }
-    .flex-custom {
-      gap: 0px;
-    }
-    .text-5xl {
-      display: none;
-    }
-    .capriola {
-      font-size: 0.3em;
-    }
-    .slide-wrapper {
-      font-size: 0.5em;
-      gap: 0;
-      .slide {
-        padding: 6px;
       }
       img {
-        width: 3rem;
-        height: 3rem;
+        transform: scale(0.6);
       }
       .text-xl {
-        display: none;
+        font-size: 0.6em;
       }
-    }
-  }
 }

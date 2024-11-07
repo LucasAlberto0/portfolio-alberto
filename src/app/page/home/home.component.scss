@@ -25,7 +25,7 @@
         height: 125vh;
     }
     .projects-size-custom{
-        height: 150vh;
+        height: 160vh;
     }
     .form-size-custom{
         height: 100vh;
@@ -54,9 +54,12 @@
     animation: zoomIn 1.5s ease-in-out forwards;
     }
 
-    @media (max-width: 1540px) {
+    @media (max-width: 1534px) {
     h1 {
         font-size: 3em;
+    }
+    .projects-size-custom{
+        height: 180vh;
     }
     }
 
