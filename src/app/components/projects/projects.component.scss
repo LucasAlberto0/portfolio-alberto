@@ -6,6 +6,17 @@
         font-weight: bold;
         }
 
+        @media (min-width: 900px) {
+                .hover-custom {
+                transition: 0.35s;
+                cursor: default;
+                }
+                aside:hover > :not(:hover) {
+                opacity: 0.5;
+                transform: scale(0.9);
+                }
+                }
+                
         @media (max-width: 1070px) {
         article {
         max-width: 55rem;
