@@ -63,6 +63,11 @@
     }
     }
 
+    @media (max-height: 900px){
+        .experience-size-custom{
+            height: 170vh;
+        }
+    }
     @media (max-width: 1281px) {
     .projects-size-custom {
         padding: 70px 0px 70px 0px;
