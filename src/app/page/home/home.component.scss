@@ -16,19 +16,19 @@
     scroll-behavior: smooth;
     }
     .home-size-custom {
-    height: 100vh;
+    height: 100dvh;
     }
     .about-size-custom{
-        height: 100vh;
+        height: 100dvh;
     }
     .experience-size-custom{
-        height: 150vh;
+        padding: 100px 0px 100px 0px;
     }
     .projects-size-custom{
-        height: 160vh;
+        padding: 120px 0px 120px 0px;
     }
     .form-size-custom{
-        height: 100vh;
+        height: 100dvh;
     }
 
     .home-size-custom,
@@ -57,9 +57,6 @@
     @media (max-width: 1534px) {
     h1 {
         font-size: 3em;
-    }
-    .projects-size-custom{
-        height: 180vh;
     }
     }
 
