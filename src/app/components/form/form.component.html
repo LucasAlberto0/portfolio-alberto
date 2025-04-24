@@ -15,15 +15,13 @@
                 placeholder="Digite seu e-mail" required>
             <input name="subject" class="border border-white text-white bg-black placeholder-gray-500 p-2"
                 placeholder="Digite o assunto" required>
-            <input name="mathCheck" [(ngModel)]="mathAnswer" class="border border-white text-white bg-black placeholder-gray-500 p-2" placeholder="2 + 2 = ?"
-                required >
-            <input type="hidden" name="redirectTo" value="https://lucasalberto.site/agradecimento">
             <textarea name="message" placeholder="Sua mensagem..."
                 class="border border-white text-white bg-black placeholder-gray-500 p-2 h-36 resize-none"
                 required></textarea>
-
-            <button class="rounded-md h-12 font-bold hover:text-black" value="Submit"
-                [disabled]="mathAnswer != '4'">Enviar</button>
+            <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+            <input type="hidden" name="redirectTo" value="https://lucasalberto.site/agradecimento">
+            <button class="rounded-md h-12 font-bold hover:text-black" value="Submit">Enviar</button>
         </form>
         <aside>
             <h1 class="font-bold text-3xl mb-3 margin-custom1 quando">Email para contato</h1>
