@@ -144,7 +144,7 @@
         }
 
         .icon-size {
-        margin-top: 20px;
+        margin-top: 5px;
         transform: scale(1);
         }
     }
@@ -184,7 +184,7 @@
         font-size: 1.6em;
         }
         .icon-size {
-        margin-top: 20px;
+        margin-top: 5px;
         transform: scale(0.8);
         }
     }
@@ -214,11 +214,11 @@
         }
         h2 {
         font-size: 1.2em;
+        line-height: 26px;
         }
         .icon-size {
         transform: scale(0.8);
         transform-origin: top;
-        margin: 0;
         }
     }
     .footer {
@@ -244,7 +244,6 @@
         .icon-size {
         transform: scale(0.6);
         transform-origin: top;
-        margin: 0;
         }
     }
     .footer {
