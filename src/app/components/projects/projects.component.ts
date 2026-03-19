@@ -6,6 +6,8 @@ interface Project {
   image: string;
   description: string;
   deployLink?: string;
+  repoLink?: string;
+  repoLinkBack?: string;
   technologies: { src: string; alt: string }[];
   aosDuration: number;
 }
@@ -66,7 +68,8 @@ export class ProjectsComponent {
       title: 'Portfolio',
       image: '/project-portfolio.png',
       description: 'Este projeto é uma página pessoal dedicada a apresentar minha <span>trajetória profissional</span>, <span>competências</span> e <span>informações de contato</span>. A página está projetada para destacar minhas <span>experiências</span>, <span>habilidades</span> e <span>conquistas</span> de forma clara e atraente.',
-      deployLink: 'https://lucasalberto.site/',
+      deployLink: 'https://lucasalberto.online',
+      repoLink: 'https://github.com/LucasAlberto0/portfolio-alberto',
       technologies: [
         { src: 'icons/angularIcon.webp', alt: 'Angular' },
         { src: 'icons/tsIcon.png', alt: 'TypeScript' },
@@ -81,6 +84,7 @@ export class ProjectsComponent {
       image: '/project-guadalupe.png',
       description: 'Desenvolvi uma réplica da landing page do site do <span>Restaurante Mexicano Guadalupe (Santos-SP)</span>, com foco em modernidade, usabilidade e experiência do usuário, seguindo fielmente ao design original.',
       deployLink: 'https://lp-guadalupe-alberto.vercel.app/',
+      repoLink: 'https://github.com/LucasAlberto0/LP-Guadalupe',
       technologies: [
         { src: 'icons/htmlIcon.png', alt: 'HTML' },
         { src: 'icons/cssIcon.png', alt: 'CSS' },
@@ -95,11 +99,43 @@ export class ProjectsComponent {
       image: '/project-haverim.png',
       description: 'Recriei a landing page do site da <span>Haverim (Santos-SP)</span>, com uma proposta visual mais moderna e navegação otimizada para oferecer uma experiência mais intuitiva e envolvendo ao usuário, seguindo fielmente ao design original.',
       deployLink: 'https://lp-haverim.vercel.app/',
+      repoLink: 'https://github.com/LucasAlberto0/LP-Haverim',
       technologies: [
         { src: 'icons/htmlIcon.png', alt: 'HTML' },
         { src: 'icons/cssIcon.png', alt: 'CSS' },
         { src: 'icons/javascriptIcon.png', alt: 'JavaScript' },
         { src: 'icons/bootstrapIcon.svg', alt: 'Bootstrap' },
+        { src: 'icons/gitIcon.png', alt: 'Git' }
+      ],
+      aosDuration: 1400
+    },
+    {
+      title: 'Construtiva',
+      image: '/project-construtiva.png',
+      description: 'Criei o projeto <span>Construtiva</span> para a empresa <span>Medeiros e Pinheiros</span>, um sistema de <span>gerenciamento de obras</span> com controle de <span>diários</span>, <span>faturamento</span>, <span>clientes</span> e <span>andamento</span>, com níveis de acesso para <span>Gerente</span>, <span>Admin</span> e <span>Fiscal</span>, além da implementação de um <span>assistente de IA</span> com <span>RAG</span> utilizando as informações da empresa.',
+      deployLink: 'https://construtivamp.vercel.app',
+      repoLink: 'https://github.com/LucasAlberto0/ConstrutivaFront',
+      repoLinkBack: 'https://github.com/LucasAlberto0/construtivaBack',
+      technologies: [
+        { src: 'icons/angularIcon.webp', alt: 'Angular' },
+        { src: 'icons/tsIcon.png', alt: 'TypeScript' },
+        { src: 'icons/netIcon.svg', alt: '.Net' },
+        { src: 'icons/sassIcon.webp', alt: 'Sass' },
+        { src: 'icons/postgresqlIcon.svg', alt: 'PostgreSql' },
+        { src: 'icons/gitIcon.png', alt: 'Git' }
+      ],
+      aosDuration: 1400
+    },
+    {
+      title: 'Popblitz',
+      image: '/project-popblitz.png',
+      description: '<span>Popblitz</span> é um jogo <span>multiplayer</span> (2 a 16 jogadores) de adivinhação com <span>imagens</span>, <span>músicas</span> e perguntas de <span>cultura pop</span>, onde os jogadores precisam identificar corretamente o <span>filme</span>, <span>série</span>, <span>jogo</span> ou <span>personalidade</span> de cada rodada.',
+      deployLink: 'https://popblitz.vercel.app',
+      repoLink: 'https://github.com/LucasAlberto0/popblitz',
+      technologies: [
+        { src: 'icons/nextjsIcon.png', alt: 'Next.js' },
+        { src: 'icons/supabaseIcon.svg', alt: 'Supabase' },
+        { src: 'icons/tailwindIcon.svg', alt: 'Tailwind' },
         { src: 'icons/gitIcon.png', alt: 'Git' }
       ],
       aosDuration: 1400
