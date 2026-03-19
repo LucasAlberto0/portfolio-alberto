@@ -1,27 +1,60 @@
-# PortfolioAlberto
+# Lucas Alberto - Portfólio 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.1.
+Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi desenvolvido para centralizar minha trajetória profissional, competências técnicas e os principais projetos que desenvolvi ao longo da minha carreira como **Desenvolvedor Full Stack**.
 
-## Development server
+![Captura de tela do Portfólio](public/imagem-do-portfolio.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Sobre o Projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+O objetivo deste portfólio é oferecer uma experiência de usuário fluida e moderna, destacando não apenas o código, mas também a atenção ao design e usabilidade. Cada detalhe foi pensado para transmitir profissionalismo e inovação.
 
-## Build
+### Principais Funcionalidades
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Modal de Projetos Dinâmico**: Visualização detalhada de cada projeto com tecnologias, descrição e links diretos para deploy e repositório.
+- **Design Responsivo**: Adaptabilidade total para dispositivos móveis, tablets e desktops.
+- **Animações Interativas**: Uso de animações de scroll (AOS) para uma navegação mais envolvente.
+- **Estética "Premium"**: Combinação de cores elegantes, tipografia moderna e ícones vetoriais (SVG).
+- **SEO Otimizado**: Estrutura semântica para melhor visibilidade em motores de busca.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Tecnologias Utilizadas
 
-## Running end-to-end tests
+Este projeto foi construído utilizando as tecnologias mais modernas do ecossistema front-end:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **[Angular 18](https://angular.dev/)**: Utilizando as melhores práticas como *Signals*, *Standalone Components* e o novo *Control Flow*.
+- **[Tailwind CSS](https://tailwindcss.com/)**: Para estilização rápida, eficiente e totalmente responsiva.
+- **[Sass (SCSS)](https://sass-lang.com/)**: Para customizações avançadas e organização de estilos globais.
+- **[AOS (Animate On Scroll)](https://michalsnik.github.io/aos/)**: Para transições suaves durante a rolagem.
+- **[Lucide SVG Icons](https://lucide.dev/)**: Ícones vetoriais nítidos e leves.
+- **[Vercel](https://vercel.com/)**: Para hospedagem e deploy contínuo.
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Projetos em Destaque
+
+Alguns dos projetos que você encontrará no portfólio:
+
+- **Construtiva**: Sistema ERP de gerenciamento de obras com assistente de IA/RAG.
+- **Popblitz**: Jogo multiplayer interativo focado em adivinhação de cultura pop.
+- **DAI**: Assistente virtual inteligente com integração de base de conhecimento personalizada.
+- **Gestão de Mentoria**: Sistema completo para acompanhamento de mentorados e atividades.
+
+---
+
+
+
+## 📬 Contato
+
+Vamos nos conectar e construir algo incrível juntos!
+
+- **Website:** [lucasalberto.online](https://lucasalberto.online)
+- **LinkedIn:** [Lucas Alberto](https://linkedin.com/in/lucas-alberto-dev)
+- **GitHub:** [@LucasAlberto0](https://github.com/LucasAlberto0)
+- **E-mail:** [alberto_l1@outlook.com](mailto:alberto_l1@outlook.com)
+
+---
+
+Desenvolvido por **Lucas Alberto**.
