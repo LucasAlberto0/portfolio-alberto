@@ -50,7 +50,7 @@ Alguns dos projetos que você encontrará no portfólio:
 
 Vamos nos conectar e construir algo incrível juntos!
 
-- **Website:** [lucasalberto.online](https://lucasalberto.online)
+- **Website:** [lucasalberto.com.br](https://lucasalberto.com.br)
 - **LinkedIn:** [Lucas Alberto](https://www.linkedin.com/in/lucasalberto0)
 - **GitHub:** [@LucasAlberto0](https://github.com/LucasAlberto0)
 - **E-mail:** [lucasalberto4321@gmail.com](mailto:lucasalberto4321@gmail.com)
