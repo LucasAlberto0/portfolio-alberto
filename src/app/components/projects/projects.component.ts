@@ -3,7 +3,8 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 interface Project {
   title: string;
-  image: string;
+  image?: string;
+  images?: string[];
   description: string;
   deployLink?: string;
   repoLink?: string;
@@ -139,6 +140,20 @@ export class ProjectsComponent {
         { src: 'icons/gitIcon.png', alt: 'Git' }
       ],
       aosDuration: 1400
+    },
+    {
+      title: 'Neuroly',
+      images: [
+        '/project-neurolyapp1.png',
+        '/project-neurolyapp2.png',
+        '/project-neurolyapp3.png'
+      ],
+      description: '<span>Neuroly</span> é uma plataforma gamificada focada em aprimorar as funções cognitivas através de <span>mini-jogos diários</span>. Com uma experiência <span>Cyber-Cognitive</span> premium e imersiva, ele atua como um hub de evolução mental, monitorando memória, atenção e agilidade.',
+      technologies: [
+        { src: 'icons/flutterIcon.png', alt: 'Flutter' },
+        { src: 'icons/gitIcon.png', alt: 'Git' }
+      ],
+      aosDuration: 1600
     }
   ];
 
