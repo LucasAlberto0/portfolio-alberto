@@ -14,8 +14,8 @@
                 <div class="h-img h-52">
                     @if (project.images) {
                         <div class="flex justify-center gap-2 h-full w-full bg-[#0a0a0a] p-2 overflow-hidden">
-                            @for (img of project.images | slice:0:2; track img) {
-                                <img [src]="img" class="h-full object-contain rounded-sm" [alt]="project.title">
+                            @for (img of project.images; track img; let i = $index) {
+                                <img [src]="img" [class.hidden]="i >= 2" class="h-full object-contain rounded-sm" [alt]="project.title">
                             }
                         </div>
                     } @else {
