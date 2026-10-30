@@ -361,6 +361,11 @@
                 align-items: center;
                 padding: 20px;
                 animation: fadeIn 0.3s ease-out;
+
+                &.closing {
+                        pointer-events: none;
+                        animation: fadeOut 0.28s ease-in forwards;
+                }
         }
 
         .modal-content {
@@ -373,6 +378,10 @@
                 overflow-y: auto;
                 box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
                 animation: scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+                &.closing {
+                        animation: scaleDown 0.28s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+                }
         }
 
         .close-btn {
@@ -502,6 +511,19 @@
                 to {
                         opacity: 1;
                         transform: scale(1);
+                }
+        }
+
+        @keyframes fadeOut {
+                to {
+                        opacity: 0;
+                }
+        }
+
+        @keyframes scaleDown {
+                to {
+                        opacity: 0;
+                        transform: scale(0.8);
                 }
         }
 

@@ -190,6 +190,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   scrollLeftStart = 0;
   dragged = false;
   private loopTimeout: any;
+  private closeTimeout: any;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
@@ -360,16 +361,19 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   }
 
   openModal(project: Project) {
+    clearTimeout(this.closeTimeout);
     this.selectedProject = project;
     this.isModalOpen = true;
     document.body.style.overflow = 'hidden';
   }
 
   closeModal() {
+    if (!this.isModalOpen) return;
     this.isModalOpen = false;
-    setTimeout(() => {
+    clearTimeout(this.closeTimeout);
+    this.closeTimeout = setTimeout(() => {
       this.selectedProject = null;
       document.body.style.overflow = 'auto';
-    }, 300);
+    }, 280);
   }
 }
