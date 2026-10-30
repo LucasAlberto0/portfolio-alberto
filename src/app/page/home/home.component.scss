@@ -16,10 +16,18 @@
     scroll-behavior: smooth;
     }
     .home-size-custom {
-    height: 100vh;
+        height: 100vh;
+        height: 100lvh;
+        height: var(--app-height, 100lvh);
+        min-height: 100lvh;
+        min-height: var(--app-height, 100lvh);
     }
     .about-size-custom{
         height: 100vh;
+        height: 100lvh;
+        height: var(--app-height, 100lvh);
+        min-height: 100lvh;
+        min-height: var(--app-height, 100lvh);
     }
     .experience-size-custom{
         padding: 100px 0px 100px 0px;
@@ -29,6 +37,10 @@
     }
     .form-size-custom{
         height: 100vh;
+        height: 100lvh;
+        height: var(--app-height, 100lvh);
+        min-height: 100lvh;
+        min-height: var(--app-height, 100lvh);
     }
 
     .home-size-custom,
