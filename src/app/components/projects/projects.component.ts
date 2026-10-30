@@ -1,5 +1,15 @@
-import { CommonModule } from '@angular/common';
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import {
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  OnInit,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+  Inject,
+  PLATFORM_ID,
+  HostListener
+} from '@angular/core';
 
 interface Project {
   title: string;
@@ -21,7 +31,7 @@ interface Project {
   styleUrl: './projects.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit, AfterViewInit {
   projects: Project[] = [
     {
       title: 'Gestão de Mentoria',
@@ -159,6 +169,186 @@ export class ProjectsComponent {
 
   selectedProject: Project | null = null;
   isModalOpen = false;
+
+  carouselProjects: Project[] = [];
+  activeIndex = 18;
+
+  @ViewChild('carousel') carouselRef?: ElementRef<HTMLElement>;
+
+  isMouseDown = false;
+  isTouchActive = false;
+  startX = 0;
+  scrollLeftStart = 0;
+  dragged = false;
+  private loopTimeout: any;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  ngOnInit(): void {
+    this.carouselProjects = [
+      ...this.projects,
+      ...this.projects,
+      ...this.projects,
+      ...this.projects,
+      ...this.projects
+    ];
+    this.activeIndex = 18;
+  }
+
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() => {
+        this.centerActiveCard(false);
+      }, 100);
+    }
+  }
+
+  @HostListener('window:resize')
+  onResize(): void {
+    if (isPlatformBrowser(this.platformId) && window.innerWidth <= 767) {
+      this.centerActiveCard(false);
+    }
+  }
+
+  centerActiveCard(smooth: boolean = false): void {
+    const container = this.carouselRef?.nativeElement;
+    if (!container) return;
+    const cards = container.children;
+    if (!cards || !cards[this.activeIndex]) return;
+
+    const targetCard = cards[this.activeIndex] as HTMLElement;
+    const scrollTarget = targetCard.offsetLeft - (container.clientWidth - targetCard.offsetWidth) / 2;
+
+    if (!smooth) {
+      container.style.scrollBehavior = 'auto';
+      container.scrollLeft = scrollTarget;
+      container.style.scrollBehavior = '';
+    } else {
+      container.scrollTo({ left: scrollTarget, behavior: 'smooth' });
+    }
+  }
+
+  onMouseDown(e: MouseEvent, container: HTMLElement) {
+    if (typeof window !== 'undefined' && window.innerWidth > 767) return;
+    this.isMouseDown = true;
+    this.dragged = false;
+    this.startX = e.pageX - container.offsetLeft;
+    this.scrollLeftStart = container.scrollLeft;
+  }
+
+  onMouseMove(e: MouseEvent, container: HTMLElement) {
+    if (!this.isMouseDown) return;
+    const x = e.pageX - container.offsetLeft;
+    const walk = x - this.startX;
+    if (Math.abs(walk) > 6) {
+      this.dragged = true;
+      container.scrollLeft = this.scrollLeftStart - walk;
+    }
+  }
+
+  onMouseUp(container?: HTMLElement) {
+    this.isMouseDown = false;
+    if (container) {
+      this.checkInfiniteLoop(container);
+    }
+  }
+
+  onMouseLeave(container?: HTMLElement) {
+    this.isMouseDown = false;
+    if (container) {
+      this.checkInfiniteLoop(container);
+    }
+  }
+
+  onTouchStart() {
+    this.isTouchActive = true;
+    this.dragged = false;
+  }
+
+  onTouchMove() {
+    this.dragged = true;
+  }
+
+  onTouchEnd(container?: HTMLElement) {
+    this.isTouchActive = false;
+    if (container) {
+      this.checkInfiniteLoop(container);
+    }
+  }
+
+  onScroll(container: HTMLElement) {
+    if (typeof window !== 'undefined' && window.innerWidth > 767) return;
+
+    const containerCenter = container.scrollLeft + container.clientWidth / 2;
+    const cards = container.children;
+    let closestIndex = this.activeIndex;
+    let minDiff = Infinity;
+
+    for (let i = 0; i < cards.length; i++) {
+      const card = cards[i] as HTMLElement;
+      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+      const diff = Math.abs(containerCenter - cardCenter);
+      if (diff < minDiff) {
+        minDiff = diff;
+        closestIndex = i;
+      }
+    }
+
+    if (this.activeIndex !== closestIndex) {
+      this.activeIndex = closestIndex;
+    }
+
+    this.checkInfiniteLoop(container);
+  }
+
+  checkInfiniteLoop(container: HTMLElement) {
+    if (this.isMouseDown || this.isTouchActive) return;
+
+    clearTimeout(this.loopTimeout);
+    this.loopTimeout = setTimeout(() => {
+      this.normalizeCarouselPosition(container);
+    }, 150);
+  }
+
+  normalizeCarouselPosition(container: HTMLElement) {
+    const cards = container.children;
+    if (!cards || cards.length === 0) return;
+
+    let targetIndex = this.activeIndex;
+    if (targetIndex >= 27) {
+      while (targetIndex >= 27) {
+        targetIndex -= 9;
+      }
+    } else if (targetIndex < 18) {
+      while (targetIndex < 18) {
+        targetIndex += 9;
+      }
+    }
+
+    if (targetIndex !== this.activeIndex && cards[targetIndex] && cards[this.activeIndex]) {
+      const currentCard = cards[this.activeIndex] as HTMLElement;
+      const targetCard = cards[targetIndex] as HTMLElement;
+      const delta = targetCard.offsetLeft - currentCard.offsetLeft;
+
+      container.style.scrollSnapType = 'none';
+      container.style.scrollBehavior = 'auto';
+      container.scrollLeft += delta;
+      this.activeIndex = targetIndex;
+
+      requestAnimationFrame(() => {
+        container.style.scrollSnapType = '';
+        container.style.scrollBehavior = '';
+      });
+    }
+  }
+
+  handleCardClick(project: Project) {
+    if (this.dragged) {
+      this.dragged = false;
+      return;
+    }
+    this.openModal(project);
+  }
 
   openModal(project: Project) {
     this.selectedProject = project;
