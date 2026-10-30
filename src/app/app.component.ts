@@ -17,7 +17,7 @@ export class AppComponent implements OnInit, OnDestroy {
   private resizeListener?: () => void;
   private orientationListener?: () => void;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -35,14 +35,21 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   private initViewportHeight(): void {
-    const setAppHeight = () => {
-      const probe = document.createElement('div');
-      probe.style.cssText = 'position:fixed;top:0;left:0;height:100lvh;visibility:hidden;pointer-events:none;z-index:-9999;';
-      document.body.appendChild(probe);
-      const lvh = probe.getBoundingClientRect().height;
-      probe.remove();
+    const isSafari = this.detectSafari();
+    if (isSafari) {
+      document.documentElement.classList.add('is-safari');
+    }
 
-      const height = lvh > 0 ? lvh : window.innerHeight;
+    const setAppHeight = () => {
+      let height = window.innerHeight;
+      if (isSafari) {
+        const probe = document.createElement('div');
+        probe.style.cssText = 'position:fixed;top:0;left:0;height:100lvh;visibility:hidden;pointer-events:none;z-index:-9999;';
+        document.body.appendChild(probe);
+        const lvh = probe.getBoundingClientRect().height;
+        probe.remove();
+        if (lvh > 0) height = lvh;
+      }
       document.documentElement.style.setProperty('--app-height', `${height}px`);
     };
 
@@ -51,7 +58,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
     this.resizeListener = () => {
       const isMobile = window.innerWidth <= 1070;
-      // On mobile devices, ignore vertical-only toolbar toggle resizes when scrolling
+
       if (isMobile) {
         if (Math.abs(window.innerWidth - this.lastWidth) > 30) {
           this.lastWidth = window.innerWidth;
@@ -74,5 +81,18 @@ export class AppComponent implements OnInit, OnDestroy {
 
     window.addEventListener('resize', this.resizeListener);
     window.addEventListener('orientationchange', this.orientationListener);
+  }
+
+  private detectSafari(): boolean {
+    if (typeof window === 'undefined' || !window.navigator) return false;
+    const ua = window.navigator.userAgent;
+    const vendor = window.navigator.vendor || '';
+    const isOther = /CriOS|GSA|FxiOS|EdgiOS|OPiOS|OPT|DuckDuckGo/i.test(ua);
+    if (isOther) return false;
+    const isApple = /Apple Computer/i.test(vendor);
+    const hasSafari = /Safari/i.test(ua);
+    const hasVersion = /Version\//i.test(ua);
+    return (isApple && hasSafari && hasVersion) ||
+      (!isOther && /iPhone|iPad|iPod/i.test(ua) && hasSafari && hasVersion);
   }
 }

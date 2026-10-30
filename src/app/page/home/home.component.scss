@@ -94,8 +94,26 @@
 
     @media (max-width: 1070px) {
     .home-size-custom {
+        height: 100vh;
+        height: 100lvh;
+        height: var(--app-height, 100lvh);
+        min-height: 100lvh;
+        min-height: var(--app-height, 100lvh);
+        box-sizing: border-box;
+        padding-top: 60px;
+        padding-bottom: 0px;
+
+        &.is-safari {
+            height: calc(var(--app-height, 100lvh) + 80px);
+            min-height: calc(var(--app-height, 100lvh) + 80px);
+            padding-top: 0px;
+            padding-bottom: 80px;
+        }
+    }
+    :host-context(html.is-safari) .home-size-custom {
         height: calc(var(--app-height, 100lvh) + 80px);
         min-height: calc(var(--app-height, 100lvh) + 80px);
+        padding-top: 0px;
         padding-bottom: 80px;
     }
     .projects-size-custom,
@@ -252,6 +270,15 @@
         height: var(--app-height, 100lvh);
         min-height: 100lvh;
         min-height: var(--app-height, 100lvh);
+        padding-top: 30px;
+        padding-bottom: 0px;
+
+        &.is-safari {
+            padding-top: 30px;
+            padding-bottom: 0px;
+        }
+    }
+    :host-context(html.is-safari) .home-size-custom {
         padding-top: 30px;
         padding-bottom: 0px;
     }
