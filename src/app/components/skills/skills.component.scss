@@ -179,18 +179,22 @@
       width: 100%;
       max-width: 54.5rem;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0;
+    }
+
+    .flex-custom {
+      gap: 0;
     }
 
     .icon-size {
-      transform: scale(0.85);
+      transform: scale(0.8);
       padding: 0;
       width: 2em;
       transform-origin: left;
     }
     .text-5xl {
-      font-size: 2.3em;
-      margin-bottom: 35px;
+      font-size: 2.4em;
+      margin-bottom: 40px;
     }
   }
 }
@@ -201,7 +205,7 @@
       max-width: 44rem;
     }
     .text-5xl {
-      font-size: 2.1em;
+      font-size: 2.2em;
       margin-bottom: 30px;
     }
   }
@@ -267,18 +271,22 @@
       width: 100%;
       max-width: 29.5rem;
       margin: 0 auto;
-      padding: 0 1.25rem;
+      padding: 0;
+    }
+
+    .flex-custom {
+      gap: 0;
     }
 
     .icon-size {
-      transform: scale(0.85);
+      transform: scale(0.9);
       padding: 0;
       width: 2em;
       transform-origin: left;
     }
     .text-5xl {
       font-size: 1.8em;
-      margin-bottom: 24px;
+      margin-bottom: 30px;
     }
   }
 }
@@ -287,11 +295,18 @@
   article.skills-container {
     .skills-title {
       max-width: 22rem;
-      padding: 0 1rem;
+      padding: 0;
+    }
+    .flex-custom {
+      gap: 0;
+    }
+    .icon-size {
+      transform: scale(0.8);
+      transform-origin: left;
     }
     .text-5xl {
       font-size: 1.6em;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
   }
 
@@ -316,15 +331,33 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 370px) {
   article.skills-container {
     .skills-title {
       max-width: 20rem;
-      padding: 0 0.5rem;
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  article.skills-container {
+    .skills-title {
+      max-width: 19rem;
+      padding: 0;
+    }
+    .flex-custom {
+      gap: 0;
+    }
+    .icon-size {
+      transform: scale(0.6);
+      padding: 0;
+      width: 2em;
+      transform-origin: left;
     }
     .text-5xl {
-      font-size: 1.4em;
-      margin-bottom: 16px;
+      font-size: 1.6em;
+      margin-bottom: 30px;
     }
   }
 
