@@ -1,9 +1,9 @@
 <article class="w-full 2xl:max-w-7xl xl:max-w-6xl md:max-w-5xl sm:max-w-2xl text-black mt-32">
     <div class="projects-title text-5xl font-bold title mb-12 quando flex-custom justify-end" data-aos="zoom-in-up"
         data-aos-duration="1200">
-        <img src="icons/line-start-black.webp" width="64" height="64" loading="lazy" decoding="async" class="w-16 h-16 icon-size1 icon-left" alt="">
+        <img src="icons/line-start-black.webp" width="64" height="64" decoding="async" class="w-16 h-16 icon-size1 icon-left" alt="">
         Projetos
-        <img src="icons/line-end-black.webp" width="64" height="64" loading="lazy" decoding="async" class="w-16 h-16 icon-size1" alt="">
+        <img src="icons/line-end-black.webp" width="64" height="64" decoding="async" class="w-16 h-16 icon-size1" alt="">
     </div>
     <aside class="desktop-projects flex flex-row flex-wrap justify-center gap-2 text-center">
         @for (project of projects; track project.title) {
@@ -13,14 +13,12 @@
                 @if (project.images) {
                 <div class="flex justify-center gap-2 h-full w-full bg-[#0a0a0a] p-2 overflow-hidden">
                     @for (img of project.images; track img; let i = $index) {
-                    <img [src]="img" [class.hidden]="i >= 2" loading="lazy" decoding="async" class="h-full object-contain rounded-sm"
+                    <img [src]="img" [class.hidden]="i >= 2" decoding="sync" class="h-full object-contain rounded-sm"
                         [alt]="project.title">
                     }
                 </div>
                 } @else {
-                <img [src]="project.cardImage || project.image"
-                    [attr.srcset]="project.cardImage ? project.cardImage + ' 640w, ' + project.image + ' 1400w' : null"
-                    sizes="(max-width: 768px) 300px, 320px" loading="lazy" decoding="async" class="w-full h-full"
+                <img [src]="project.image" decoding="sync" class="w-full h-full"
                     [alt]="project.title">
                 }
             </div>
@@ -28,7 +26,7 @@
                 <p class="font-bold text-xl bg-black text-white p-2 quando">{{ project.title }}</p>
                 <div class="flex-custom justify-center w-full bg-black gap-1 p-2">
                     @for (tech of project.technologies; track tech.alt) {
-                    <img [src]="tech.src" class="white-filter icon-size" width="22" height="22" loading="lazy" decoding="async" [alt]="tech.alt">
+                    <img [src]="tech.src" class="white-filter icon-size" width="22" height="22" decoding="sync" [alt]="tech.alt">
                     }
                 </div>
             </div>
@@ -49,14 +47,12 @@
                 @if (project.images) {
                 <div class="flex justify-center gap-2 h-full w-full bg-[#0a0a0a] p-2 overflow-hidden">
                     @for (img of project.images; track img; let imgIdx = $index) {
-                    <img [src]="img" [class.hidden]="imgIdx >= 2" loading="lazy" decoding="async" class="h-full object-contain rounded-sm"
+                    <img [src]="img" [class.hidden]="imgIdx >= 2" decoding="sync" class="h-full object-contain rounded-sm"
                         [alt]="project.title">
                     }
                 </div>
                 } @else {
-                <img [src]="project.cardImage || project.image"
-                    [attr.srcset]="project.cardImage ? project.cardImage + ' 640w, ' + project.image + ' 1400w' : null"
-                    sizes="(max-width: 768px) 300px, 320px" loading="lazy" decoding="async" class="w-full h-full"
+                <img [src]="project.image" decoding="sync" class="w-full h-full"
                     [alt]="project.title">
                 }
             </div>
@@ -64,7 +60,7 @@
                 <p class="font-bold text-xl bg-black text-white p-2 quando">{{ project.title }}</p>
                 <div class="flex-custom justify-center w-full bg-black gap-1 p-2">
                     @for (tech of project.technologies; track tech.alt) {
-                    <img [src]="tech.src" class="white-filter icon-size" width="22" height="22" loading="lazy" decoding="async" [alt]="tech.alt">
+                    <img [src]="tech.src" class="white-filter icon-size" width="22" height="22" decoding="sync" [alt]="tech.alt">
                     }
                 </div>
             </div>
@@ -91,12 +87,12 @@
                 @if (selectedProject.images) {
                 <div class="flex justify-center gap-4 h-full w-full bg-[#0a0a0a] p-6 rounded-t-2xl">
                     @for (img of selectedProject.images; track img) {
-                    <img [src]="img" decoding="async" class="h-full object-contain rounded-lg shadow-lg" style="max-height: 400px"
+                    <img [src]="img" decoding="sync" fetchpriority="high" class="h-full object-contain rounded-lg shadow-lg" style="max-height: 400px"
                         [alt]="selectedProject.title">
                     }
                 </div>
                 } @else {
-                <img [src]="selectedProject.image" decoding="async" class="modal-image" [alt]="selectedProject.title">
+                <img [src]="selectedProject.image" decoding="sync" fetchpriority="high" class="modal-image" [alt]="selectedProject.title">
                 }
             </div>
 
@@ -107,7 +103,7 @@
                     <div class="flex-custom flex-wrap justify-center gap-3">
                         @for (tech of selectedProject.technologies; track tech.alt) {
                         <div class="tech-badge bg-black text-white rounded-full capriola flex items-center gap-2">
-                            <img [src]="tech.src" class="white-filter" width="16" height="16" decoding="async" [alt]="tech.alt">
+                            <img [src]="tech.src" class="white-filter" width="16" height="16" decoding="sync" [alt]="tech.alt">
                             {{ tech.alt }}
                         </div>
                         }

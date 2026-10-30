@@ -14,7 +14,6 @@ import {
 interface Project {
   title: string;
   image?: string;
-  cardImage?: string;
   images?: string[];
   description: string;
   deployLink?: string;
@@ -37,7 +36,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     {
       title: 'Gestão de Mentoria',
       image: '/project-gdm.webp',
-      cardImage: '/project-gdm-640.webp',
       description: 'Participei do desenvolvimento <span>front-end</span> do <span>GDM</span>. Projeto para gerir a <span>Creath Academy</span>, onde tem o sistema dos mentores e mentorados, podendo ver suas atividades, ver seus projetos, marcar eventos, visualizar eventos, modificar suas informações, etc.',
       technologies: [
         { src: 'icons/angularIcon.webp', alt: 'Angular' },
@@ -52,7 +50,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     {
       title: 'DAI',
       image: '/project-dai-at.webp',
-      cardImage: '/project-dai-at-640.webp',
       description: 'Fui <span>desenvolvedor front-end</span> do sistema da <span>DAI</span> e <span>Gestor de Automação com I.A</span>. A <span>DAI</span> consiste em um sistema de <span>inteligência artificial</span> utilizando <span>RAG</span>, que aprende as características que o usuário desejar, criando um assistente inteligente virtual.',
       deployLink: 'https://dai.tec.br/',
       technologies: [
@@ -68,7 +65,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     {
       title: 'Pet Sitter Finder',
       image: '/project-fps.webp',
-      cardImage: '/project-fps-640.webp',
       description: 'Fui desenvolvedor <span>front-end</span> do <span>Pet Sitter Finder</span>. <span>Pet Sitter Finder</span> consiste em uma rede social onde pessoas interessadas em achar um cuidador para o seu animal, encontra <span>pet-sitters</span> dispostos a negociação.',
       technologies: [
         { src: 'icons/angularIcon.webp', alt: 'Angular' },
@@ -82,7 +78,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     {
       title: 'Portfolio',
       image: '/project-portfolio.webp',
-      cardImage: '/project-portfolio-640.webp',
       description: 'Este projeto é uma página pessoal dedicada a apresentar minha <span>trajetória profissional</span>, <span>competências</span> e <span>informações de contato</span>. A página está projetada para destacar minhas <span>experiências</span>, <span>habilidades</span> e <span>conquistas</span> de forma clara e atraente.',
       deployLink: 'https://lucasalberto.online',
       repoLink: 'https://github.com/LucasAlberto0/portfolio-alberto',
@@ -98,7 +93,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     {
       title: 'Guadalupe',
       image: '/project-guadalupe.webp',
-      cardImage: '/project-guadalupe-640.webp',
       description: 'Desenvolvi uma réplica da landing page do site do <span>Restaurante Mexicano Guadalupe (Santos-SP)</span>, com foco em modernidade, usabilidade e experiência do usuário, seguindo fielmente ao design original.',
       deployLink: 'https://lp-guadalupe-alberto.vercel.app/',
       repoLink: 'https://github.com/LucasAlberto0/LP-Guadalupe',
@@ -114,7 +108,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     {
       title: 'Haverim',
       image: '/project-haverim.webp',
-      cardImage: '/project-haverim-640.webp',
       description: 'Recriei a landing page do site da <span>Haverim (Santos-SP)</span>, com uma proposta visual mais moderna e navegação otimizada para oferecer uma experiência mais intuitiva e envolvendo ao usuário, seguindo fielmente ao design original.',
       deployLink: 'https://lp-haverim.vercel.app/',
       repoLink: 'https://github.com/LucasAlberto0/LP-Haverim',
@@ -130,7 +123,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     {
       title: 'Construtiva',
       image: '/project-construtiva.webp',
-      cardImage: '/project-construtiva-640.webp',
       description: 'Criei o projeto <span>Construtiva</span> para a empresa <span>Medeiros e Pinheiros</span>, um sistema de <span>gerenciamento de obras</span> com controle de <span>diários</span>, <span>faturamento</span>, <span>clientes</span> e <span>andamento</span>, com níveis de acesso para <span>Gerente</span>, <span>Admin</span> e <span>Fiscal</span>, além da implementação de um <span>assistente de IA</span> com <span>RAG</span> utilizando as informações da empresa.',
       deployLink: 'https://construtivamp.vercel.app',
       repoLink: 'https://github.com/LucasAlberto0/ConstrutivaFront',
@@ -148,7 +140,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     {
       title: 'Popblitz',
       image: '/project-popblitz.webp',
-      cardImage: '/project-popblitz-640.webp',
       description: '<span>Popblitz</span> é um jogo <span>multiplayer</span> (2 a 16 jogadores) de adivinhação com <span>imagens</span>, <span>músicas</span> e perguntas de <span>cultura pop</span>, onde os jogadores precisam identificar corretamente o <span>filme</span>, <span>série</span>, <span>jogo</span> ou <span>personalidade</span> de cada rodada.',
       deployLink: 'https://popblitz.vercel.app',
       repoLink: 'https://github.com/LucasAlberto0/popblitz',
@@ -191,6 +182,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   dragged = false;
   private loopTimeout: any;
   private closeTimeout: any;
+  private preloadedImages: HTMLImageElement[] = [];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
@@ -203,6 +195,27 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
       ...this.projects
     ];
     this.activeIndex = 18;
+    if (isPlatformBrowser(this.platformId)) {
+      this.preloadImages();
+    }
+  }
+
+  private preloadImages(): void {
+    const urls = new Set<string>();
+    for (const project of this.projects) {
+      if (project.image) urls.add(project.image);
+      if (project.images) project.images.forEach(img => urls.add(img));
+      project.technologies.forEach(tech => urls.add(tech.src));
+    }
+    urls.forEach(src => {
+      const img = new Image();
+      img.decoding = 'sync';
+      img.src = src;
+      if (img.decode) {
+        img.decode().catch(() => {});
+      }
+      this.preloadedImages.push(img);
+    });
   }
 
   ngAfterViewInit(): void {

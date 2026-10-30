@@ -16,15 +16,49 @@ export class AppComponent implements OnInit, OnDestroy {
   private lastWidth = 0;
   private resizeListener?: () => void;
   private orientationListener?: () => void;
+  private preloadedImages: HTMLImageElement[] = [];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.initViewportHeight();
+      this.preloadSiteImages();
       AOS.init();
       window.addEventListener('load', () => AOS.refresh());
     }
+  }
+
+  private preloadSiteImages(): void {
+    const urls = [
+      '/albertofoto.webp',
+      '/albertoFoto3.webp',
+      '/assinatura.webp',
+      '/logocreathp.webp',
+      'icons/line-start-black.webp',
+      'icons/line-end-black.webp',
+      'icons/line-start-white.webp',
+      'icons/line-end-white.webp',
+      'icons/mostenIcon.webp',
+      'icons/DAIIcon.webp',
+      'icons/data-object.webp',
+      'icons/culturaInglesaIcon.webp',
+      'icons/computer.webp',
+      'icons/gmailIcon.webp',
+      'icons/githubIcon.webp',
+      'icons/linkedinIcon.webp',
+      'icons/whatsappIcon.webp',
+      'icons/happyFaceIcon.webp'
+    ];
+    urls.forEach(src => {
+      const img = new Image();
+      img.decoding = 'sync';
+      img.src = src;
+      if (img.decode) {
+        img.decode().catch(() => {});
+      }
+      this.preloadedImages.push(img);
+    });
   }
 
   ngOnDestroy(): void {
