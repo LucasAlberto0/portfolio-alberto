@@ -91,6 +91,11 @@
     }
 
     @media (max-width: 1070px) {
+    .home-size-custom {
+        height: calc(var(--app-height, 100lvh) + 80px);
+        min-height: calc(var(--app-height, 100lvh) + 80px);
+        padding-bottom: 80px;
+    }
     .projects-size-custom,
     .experience-size-custom,
     .about-size-custom,
