@@ -23,7 +23,7 @@ export class HeaderComponent {
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event): void {
-    const threshold = typeof window !== 'undefined' && window.innerWidth <= 900 ? 40 : 600;
+    const threshold = typeof window !== 'undefined' && window.innerWidth <= 900 ? 70 : 600;
     this.isScrolled = window.scrollY > threshold;
     const header = document.querySelector('#header') as HTMLElement;
     if (header) {

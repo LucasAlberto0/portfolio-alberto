@@ -21,6 +21,7 @@
         height: var(--app-height, 100lvh);
         min-height: 100lvh;
         min-height: var(--app-height, 100lvh);
+        position: relative;
     }
     .about-size-custom{
         height: 100vh;
@@ -91,10 +92,16 @@
     }
 
     @media (max-width: 1070px) {
-    .home-size-custom {
-        height: calc(var(--app-height, 100lvh) + 80px);
-        min-height: calc(var(--app-height, 100lvh) + 80px);
-        padding-bottom: 80px;
+    .home-size-custom::after {
+        content: "";
+        position: absolute;
+        bottom: calc(-1 * env(safe-area-inset-bottom, 50px));
+        left: 0;
+        width: 100%;
+        height: env(safe-area-inset-bottom, 50px);
+        background-color: #000000;
+        pointer-events: none;
+        z-index: 1;
     }
     .projects-size-custom,
     .experience-size-custom,
