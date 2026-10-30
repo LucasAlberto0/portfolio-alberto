@@ -16,19 +16,19 @@ export interface Skill {
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SkillsComponent implements AfterViewInit {
-  skillsRow1: Skill[] = [
+  readonly skillsRow1: Skill[] = [
     { name: 'Angular', icon: 'icons/angularIcon.webp' },
-    { name: 'Typescript', icon: 'icons/tsIcon.png' },
+    { name: 'Typescript', icon: 'icons/tsIcon.webp' },
     { name: 'React', icon: 'icons/reactIcon.svg' },
     { name: 'PostgreSQL', icon: 'icons/postgresqlIcon.svg' },
-    { name: 'JavaScript', icon: 'icons/javascriptIcon.png' },
-    { name: 'Git', icon: 'icons/gitIcon.png' },
+    { name: 'JavaScript', icon: 'icons/javascriptIcon.webp' },
+    { name: 'Git', icon: 'icons/gitIcon.webp' },
     { name: 'Sass', icon: 'icons/sassIcon.webp' },
     { name: 'Tailwind', icon: 'icons/tailwindIcon.svg' },
-    { name: 'Next.Js', icon: 'icons/nextjsIcon.png' }
+    { name: 'Next.Js', icon: 'icons/nextjsIcon.webp' }
   ];
 
-  skillsRow2: Skill[] = [
+  readonly skillsRow2: Skill[] = [
     { name: 'Figma', icon: 'icons/figmaIcon.webp' },
     { name: 'Supabase', icon: 'icons/supabaseIcon.svg' },
     { name: 'N8N', icon: 'icons/n8nIcon.svg' },
@@ -36,12 +36,10 @@ export class SkillsComponent implements AfterViewInit {
     { name: 'Vue.Js', icon: 'icons/vueIcon.svg' },
     { name: '.Net', icon: 'icons/netIcon.svg' },
     { name: 'Node.js', icon: 'icons/nodeIcon.svg' },
-    { name: 'Flutter', icon: 'icons/flutterIcon.png' }
+    { name: 'Flutter', icon: 'icons/flutterIcon.webp' }
   ];
 
-  get allSkills(): Skill[] {
-    return [...this.skillsRow1, ...this.skillsRow2];
-  }
+  readonly allSkills: Skill[] = [...this.skillsRow1, ...this.skillsRow2];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 

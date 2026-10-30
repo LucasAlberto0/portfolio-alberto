@@ -61,20 +61,48 @@
   }
 }
 
+.carousel-row {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  transform: translateZ(0);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+
 .carousel-track {
   display: flex;
   width: max-content;
   will-change: transform;
-
-  &:active {
-    animation-play-state: paused;
-  }
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
 }
 
 .carousel-group {
   display: flex;
   flex-shrink: 0;
   align-items: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .scroll-left {
@@ -112,6 +140,9 @@
   background-color: transparent;
   box-sizing: border-box;
   user-select: none;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
 
   img {
     display: inline-block;
@@ -142,8 +173,11 @@
     width: 100%;
     overflow: hidden;
     padding: 10px 0;
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+
+    .carousel-row::before,
+    .carousel-row::after {
+      width: 6%;
+    }
 
     .carousel-track {
       animation-duration: 42s;
@@ -231,8 +265,11 @@
     width: 100%;
     overflow: hidden;
     padding: 8px 0;
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+
+    .carousel-row::before,
+    .carousel-row::after {
+      width: 5%;
+    }
 
     .carousel-row:nth-child(1) .carousel-track {
       animation-duration: 22s;

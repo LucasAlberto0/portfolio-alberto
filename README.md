@@ -2,7 +2,7 @@
 
 Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi desenvolvido para centralizar minha trajetória profissional, competências técnicas e os principais projetos que desenvolvi ao longo da minha carreira como **Desenvolvedor Full Stack**.
 
-![Captura de tela do Portfólio](public/imagem-do-portfolio.png)
+![Captura de tela do Portfólio](public/imagem-do-portfolio.webp)
 
 ---
 
