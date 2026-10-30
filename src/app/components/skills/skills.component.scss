@@ -1,5 +1,4 @@
-
-.slide{
+.slide {
   width: 180px;
   height: 180px;
   padding: 10px;
@@ -10,7 +9,16 @@
   font-weight: bold;
 }
 
-@media (max-width: 1280px) {
+.desktop-skills {
+  display: flex;
+}
+
+.tablet-carousel-wrapper,
+.mobile-carousel-wrapper {
+  display: none;
+}
+
+@media (max-width: 1280px) and (min-width: 1025px) {
   article {
     .icon-size {
       transform: scale(1);
@@ -18,16 +26,16 @@
     .text-5xl {
       font-size: 2.6em;
     }
-      img {
-        transform: scale(0.9);
-      }
-      .text-xl {
-        font-size: 1.4em;
-      }
+    img {
+      transform: scale(0.9);
+    }
+    .text-xl {
+      font-size: 1.4em;
+    }
   }
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1070px) and (min-width: 1025px) {
   article {
     max-width: 54.5rem;
     .icon-size {
@@ -40,92 +48,314 @@
       font-size: 2.4em;
       margin-bottom: 40px;
     }
-    .slide{
+    .slide {
       width: 170px;
       height: 170px;
     }
-      img {
-        transform: scale(0.8);
-      }
-      .text-xl {
-        font-size: 1.3em;
-      }
-  }
-}
-
-@media (max-width: 900px) {
-  article {
-    max-width: 44rem;
-    .icon-size {
+    img {
       transform: scale(0.8);
     }
-    .text-5xl {
-      font-size: 2.2em;
-      margin-bottom: 40px;
+    .text-xl {
+      font-size: 1.3em;
     }
-      img {
-        transform: scale(0.7);
-      }
-      .text-xl {
-        font-size: 1.3em;
-      }
   }
 }
 
-@media (max-width: 710px) {
-  article {
-    max-width: 29.5rem;
+.carousel-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+
+  &:active {
+    animation-play-state: paused;
+  }
+}
+
+.carousel-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.scroll-left {
+  animation: scrollLeft 36s linear infinite;
+}
+
+.scroll-right {
+  animation: scrollRight 36s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slide-card {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  user-select: none;
+
+  img {
+    display: inline-block;
+    object-fit: contain;
+  }
+
+  .skill-name {
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  :host {
+    display: block;
+    width: 100%;
+  }
+
+  .desktop-skills {
+    display: none !important;
+  }
+  .mobile-carousel-wrapper {
+    display: none !important;
+  }
+
+  .tablet-carousel-wrapper {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+
+    .carousel-track {
+      animation-duration: 42s;
+    }
+
+    .carousel-group {
+      gap: 16px;
+      padding-right: 16px;
+    }
+
+    .slide-card {
+      width: 150px;
+      height: 150px;
+      padding: 12px;
+
+      img {
+        width: 58px;
+        height: 58px;
+      }
+
+      .skill-name {
+        padding-top: 10px;
+        font-size: 1.15rem;
+      }
+    }
+  }
+
+  article.skills-container {
+    max-width: 100% !important;
+    width: 100%;
+
+    .skills-title {
+      width: 100%;
+      max-width: 54.5rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
     .icon-size {
-      transform: scale(0.9);
+      transform: scale(0.85);
+      padding: 0;
+      width: 2em;
+      transform-origin: left;
+    }
+    .text-5xl {
+      font-size: 2.3em;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  article.skills-container {
+    .skills-title {
+      max-width: 44rem;
+    }
+    .text-5xl {
+      font-size: 2.1em;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  :host {
+    display: block;
+    width: 100%;
+  }
+
+  .desktop-skills {
+    display: none !important;
+  }
+  .tablet-carousel-wrapper {
+    display: none !important;
+  }
+
+  .mobile-carousel-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    overflow: hidden;
+    padding: 8px 0;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+
+    .carousel-row:nth-child(1) .carousel-track {
+      animation-duration: 22s;
+    }
+    .carousel-row:nth-child(2) .carousel-track {
+      animation-duration: 20s;
+    }
+
+    .carousel-group {
+      gap: 12px;
+      padding-right: 12px;
+    }
+
+    .slide-card {
+      width: 122px;
+      height: 122px;
+      padding: 8px;
+
+      img {
+        width: 46px;
+        height: 46px;
+      }
+
+      .skill-name {
+        padding-top: 6px;
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  article.skills-container {
+    max-width: 100% !important;
+    width: 100%;
+
+    .skills-title {
+      width: 100%;
+      max-width: 29.5rem;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .icon-size {
+      transform: scale(0.85);
+      padding: 0;
+      width: 2em;
+      transform-origin: left;
     }
     .text-5xl {
       font-size: 1.8em;
+      margin-bottom: 24px;
     }
-    .slide{
-      width: 160px;
-      height: 160px;
-      padding: 30px;
-    }
-      img {
-        transform: scale(0.7);
-      }
   }
 }
 
 @media (max-width: 480px) {
-  article {
-    max-width: 22rem;
-    .icon-size {
-      transform: scale(0.8);
+  article.skills-container {
+    .skills-title {
+      max-width: 22rem;
+      padding: 0 1rem;
     }
     .text-5xl {
       font-size: 1.6em;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
-    .slide{
-      width: 150px;
-      height: 150px;
-    }
+  }
+
+  .mobile-carousel-wrapper {
+    gap: 12px;
+
+    .slide-card {
+      width: 114px;
+      height: 114px;
+      padding: 7px;
+
       img {
-        transform: scale(0.7);
+        width: 42px;
+        height: 42px;
       }
+
+      .skill-name {
+        padding-top: 5px;
+        font-size: 0.88rem;
+      }
+    }
   }
 }
 
-@media (max-width: 370px) {
-  article {
-    max-width: 20rem;
+@media (max-width: 360px) {
+  article.skills-container {
+    .skills-title {
+      max-width: 20rem;
+      padding: 0 0.5rem;
+    }
+    .text-5xl {
+      font-size: 1.4em;
+      margin-bottom: 16px;
+    }
+  }
+
+  .mobile-carousel-wrapper {
+    gap: 10px;
+
+    .carousel-group {
+      gap: 10px;
+      padding-right: 10px;
+    }
+
+    .slide-card {
+      width: 100px;
+      height: 100px;
+      padding: 5px;
+
+      img {
+        width: 36px;
+        height: 36px;
+      }
+
+      .skill-name {
+        padding-top: 3px;
+        font-size: 0.8rem;
+      }
+    }
   }
 }
 
-@media (max-width: 340px) {
-  article {
-    max-width: 19rem;
-      }
-      img {
-        transform: scale(0.6);
-      }
-      .text-xl {
-        font-size: 0.6em;
-      }
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    animation: none !important;
+  }
 }

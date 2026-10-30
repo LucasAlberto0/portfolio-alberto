@@ -1,9 +1,10 @@
-<article class="w-full h-full 2xl:max-w-7xl xl:max-w-6xl md:max-w-5xl sm:max-w-2xl h-3/5 text-black overflow-hidden ">
-    <div class="text-5xl font-bold title mb-12 quando flex-custom">
+<article class="w-full h-full 2xl:max-w-7xl xl:max-w-6xl md:max-w-5xl sm:max-w-2xl h-3/5 text-black overflow-hidden mx-auto skills-container">
+    <div class="skills-title text-5xl font-bold title mb-12 quando flex-custom">
         <img src="icons/line-start-black.png" class="w-16 h-16 icon-size" alt="" />Tecnologias
     </div>
+
     <div
-        class="flex flex-row gap-5 text-center capriola flex flex-row gap-3 flex-wrap justify-center items-center slide-box">
+        class="desktop-skills flex flex-row gap-5 text-center capriola flex flex-row gap-3 flex-wrap justify-center items-center slide-box">
         <div class="border border-8 border-black rounded-2xl slide" data-aos="zoom-in" data-aos-duration="800">
             <img src="icons/angularIcon.webp" class="w-24 h-24 inline-block white-filter" />
             <div class="pt-4 font-bold text-xl">Angular</div>
@@ -72,6 +73,59 @@
         <div class="border border-8 border-black rounded-2xl slide" data-aos="zoom-in" data-aos-duration="800">
             <img src="icons/flutterIcon.png" class="w-24 h-24 inline-block white-filter" />
             <div class="pt-4 font-bold text-xl">Flutter</div>
+        </div>
+    </div>
+
+    <div class="tablet-carousel-wrapper" data-aos="zoom-in" data-aos-duration="800">
+        <div class="carousel-track scroll-left">
+            <div class="carousel-group capriola">
+                <div *ngFor="let skill of allSkills" class="border border-8 border-black rounded-2xl slide-card">
+                    <img [src]="skill.icon" class="white-filter" [alt]="skill.name" />
+                    <div class="skill-name">{{ skill.name }}</div>
+                </div>
+            </div>
+            <div class="carousel-group capriola" aria-hidden="true">
+                <div *ngFor="let skill of allSkills" class="border border-8 border-black rounded-2xl slide-card">
+                    <img [src]="skill.icon" class="white-filter" [alt]="skill.name" />
+                    <div class="skill-name">{{ skill.name }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-carousel-wrapper" data-aos="zoom-in" data-aos-duration="800">
+        <div class="carousel-row">
+            <div class="carousel-track scroll-left">
+                <div class="carousel-group capriola">
+                    <div *ngFor="let skill of skillsRow1" class="border border-8 border-black rounded-2xl slide-card">
+                        <img [src]="skill.icon" class="white-filter" [alt]="skill.name" />
+                        <div class="skill-name">{{ skill.name }}</div>
+                    </div>
+                </div>
+                <div class="carousel-group capriola" aria-hidden="true">
+                    <div *ngFor="let skill of skillsRow1" class="border border-8 border-black rounded-2xl slide-card">
+                        <img [src]="skill.icon" class="white-filter" [alt]="skill.name" />
+                        <div class="skill-name">{{ skill.name }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-row">
+            <div class="carousel-track scroll-right">
+                <div class="carousel-group capriola">
+                    <div *ngFor="let skill of skillsRow2" class="border border-8 border-black rounded-2xl slide-card">
+                        <img [src]="skill.icon" class="white-filter" [alt]="skill.name" />
+                        <div class="skill-name">{{ skill.name }}</div>
+                    </div>
+                </div>
+                <div class="carousel-group capriola" aria-hidden="true">
+                    <div *ngFor="let skill of skillsRow2" class="border border-8 border-black rounded-2xl slide-card">
+                        <img [src]="skill.icon" class="white-filter" [alt]="skill.name" />
+                        <div class="skill-name">{{ skill.name }}</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </article>
