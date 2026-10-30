@@ -3,8 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    color-scheme: dark;
+}
+
 html, body {
     background-color: #000000;
+    color-scheme: dark;
     min-height: 100%;
 }
 
