@@ -15,18 +15,19 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
   menuAtivo = false;
-
+  isScrolled = false;
 
   toggleMenu() {
     this.menuAtivo = !this.menuAtivo;
   }
 
-
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event): void {
+    const threshold = typeof window !== 'undefined' && window.innerWidth <= 900 ? 40 : 60;
+    this.isScrolled = window.scrollY > threshold;
     const header = document.querySelector('#header') as HTMLElement;
     if (header) {
-      header.classList.toggle('rolagem', window.scrollY > 600);
+      header.classList.toggle('rolagem', this.isScrolled);
     }
   }
 }
